@@ -1,0 +1,20 @@
+---
+import { getLangFromUrl, useTranslations } from "../utils/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translate = useTranslations(lang);
+---
+
+<nav>
+    <div id="NavTitle">
+        <img src="/logo192.png" alt="Joan Cardozo" id="MilleniumLogoImg" />
+        <h1 id="Title">JOAN CARDOZO</h1>
+    </div>
+    <div id="NavControls">
+        <ul id="NavControlsList">
+            <li class="NavControlsList-Items">{translate("nav.about")}</li>
+            <li class="NavControlsList-Items">{translate("nav.experience")}</li>
+            <li class="NavControlsList-Items">{translate("nav.projects")}</li>
+        </ul>
+    </div>
+</nav>
