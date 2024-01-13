@@ -33,7 +33,7 @@ const translate = useTranslations(lang);
         </ul>
     </div>
     <div id="Navlang">
-        <a href="https://portfolio-six-sooty-93.vercel.app/en">
+        <a href={lang === "es" ? "https://portfolio-six-sooty-93.vercel.app" : "https://portfolio-six-sooty-93.vercel.app/en"}>
             <img
                 src={lang === "es" ? "https://portfolio-six-sooty-93.vercel.app/spanish.webp" : "https://portfolio-six-sooty-93.vercel.app/english.webp"}
                 alt="Español Logo"
