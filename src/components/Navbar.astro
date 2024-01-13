@@ -8,7 +8,7 @@ const translate = useTranslations(lang);
 <nav>
     <div id="NavLogo">
         <img
-            src="/logo192.png"
+            src="https://portfolio-six-sooty-93.vercel.app/favicon.svg"
             alt="Joan Sebastian Cardozo Salinas Logo"
             id="MilleniumLogoImg"
             width="100px"
@@ -17,10 +17,25 @@ const translate = useTranslations(lang);
     </div>
     <div id="NavControls">
         <ul id="NavControlsList">
-            <li class="NavControlsList-Items">{translate("nav.about")}</li>
-            <li class="NavControlsList-Items">{translate("nav.experience")}</li>
-            <li class="NavControlsList-Items">{translate("nav.projects")}</li>
+            <li class="NavControlsList-Items">
+                <h3>{translate("nav.about")}</h3>
+            </li>
+            <li class="NavControlsList-Items">
+                <h3>{translate("nav.experience")}</h3>
+            </li>
+            <li class="NavControlsList-Items">
+                <h3>{translate("nav.projects")}</h3>
+            </li>
         </ul>
+    </div>
+    <div id="Navlang">
+        <img
+            src="https://portfolio-six-sooty-93.vercel.app/spanish.png"
+            alt="Español Logo"
+            id="LanguageLogoImg"
+            width="100px"
+            height="100px"
+        />
     </div>
 </nav>
 <style>
@@ -68,7 +83,7 @@ const translate = useTranslations(lang);
         box-sizing: border-box;
         display: grid;
         place-content: center;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         border-radius: 8px;
     }
 

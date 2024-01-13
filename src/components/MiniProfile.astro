@@ -2,16 +2,18 @@
 import Facebook from "./icons/Facebook.astro";
 import Github from "./icons/Github.astro";
 import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
 ---
 
 <aside>
     <div id="MiniProfileMain">
         <img
-            src="/profilepicture.jpg"
+            src="https://portfolio-six-sooty-93.vercel.app/profilepicture.webp"
             alt="Joan Sebastian Cardozo Salinas"
             id="MiniProfileMainPicture"
         />
         <h2 id="MiniProfileMainName">JOAN SEBASTIAN CARDOZO SALINAS</h2>
+        <p id="MiniProfileMainDescription">FullStack Web Developer</p>
     </div>
     <div id="MiniProfileComplement">
         <ul id="MiniProfileComplement-Links">
@@ -45,7 +47,23 @@ import Linkedin from "./icons/Linkedin.astro";
                     <Linkedin />
                 </a>
             </li>
+            <li class="MiniProfileComplement-LinksItems">
+                <a
+                    href="mailto:cardozojoan13@gmail.com"
+                    rel="external"
+                    id="LinkedinLink"
+                    aria-label="Escribeme por correo si quieres contactarme"
+                >
+                    <Mail />
+                </a>
+            </li>
         </ul>
+        <img
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=PintoGamer64&hide_border=true&langs_count=8&hide_title=true&theme=transparent&hide=Nix&layout=compact&disable_animations=true"
+            alt="Joan Sebastian Cardozo Salinas Lenguajes Actividad"
+            id="MiniProfileComplement-LenguajesActivity"
+            width="320px"
+        />
         <img
             src="https://spotify-github-profile.vercel.app/api/view?uid=uwjnzqtalkghfb2gd7ueltxzb&cover_image=true&theme=natemoo-re&bar_color=ff0000&bar_color_cover=false"
             alt="Joan Sebastian Cardozo Salinas Spotify Actividad"
@@ -55,20 +73,32 @@ import Linkedin from "./icons/Linkedin.astro";
     </div>
 </aside>
 <script>
-    const SpotifyActivity = document.getElementById("MiniProfileComplement-SpotifyActivity");
+    const SpotifyActivity = document.getElementById(
+        "MiniProfileComplement-SpotifyActivity",
+    );
     setInterval(() => {
-        SpotifyActivity?.setAttribute("src", "https://spotify-github-profile.vercel.app/api/view?uid=uwjnzqtalkghfb2gd7ueltxzb&cover_image=true&theme=natemoo-re&bar_color=ff0000&bar_color_cover=false")
+        SpotifyActivity?.setAttribute(
+            "src",
+            "https://spotify-github-profile.vercel.app/api/view?uid=uwjnzqtalkghfb2gd7ueltxzb&cover_image=true&theme=natemoo-re&bar_color=ff0000&bar_color_cover=false",
+        );
     }, 10000);
 </script>
 <style>
     aside {
+        overflow: hidden;
+        overflow-y: overlay;
+        transition: all 0.2s ease;
         position: relative;
         box-sizing: border-box;
         padding: 25px 10px;
         width: 370px;
-        height: fit-content;
+        height: 100%;
         border: var(--border-width) var(--border-style)
             var(--spice-border-inactive);
+    }
+
+    aside::-webkit-scrollbar {
+        width: 0;
     }
 
     aside:hover {
@@ -77,12 +107,13 @@ import Linkedin from "./icons/Linkedin.astro";
     }
 
     aside::before {
+        transition: all 0.2s ease;
         content: "PINTOGAMER";
         color: var(--spice-header);
         position: absolute;
-        top: 0px;
+        top: 4px;
         left: 13px;
-        margin: -10px 0px;
+        margin: 0;
         background: var(--backgroundColorMain);
         padding: 0 10px;
     }
@@ -103,9 +134,14 @@ import Linkedin from "./icons/Linkedin.astro";
         border-radius: 8px;
     }
 
-    #MiniProfileMainName {
+    #MiniProfileMainName,
+    #MiniProfileMainDescription {
+        text-align: center;
         margin: 20px 0 0 0;
-        width: 320px;
+        width: 300px;
+    }
+
+    #MiniProfileMainName {
         font-size: larger;
         font-weight: 200;
         text-align: center;
@@ -127,6 +163,7 @@ import Linkedin from "./icons/Linkedin.astro";
     }
 
     #MiniProfileComplement-Links {
+        margin: 16px 0 0 0 ;
         list-style: none;
         display: flex;
         padding: 0;

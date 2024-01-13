@@ -15,8 +15,14 @@ const { title } = Astro.props;
         <meta charset="utf-8" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
-        <link rel="apple-touch-icon" href="https://portfolio-six-sooty-93.vercel.app/logo512.png" />
-        <link rel="manifest" href="https://portfolio-six-sooty-93.vercel.app/manifest.json" />
+        <link
+            rel="apple-touch-icon"
+            href="https://portfolio-six-sooty-93.vercel.app/logo512.png"
+        />
+        <link
+            rel="manifest"
+            href="https://portfolio-six-sooty-93.vercel.app/manifest.json"
+        />
         <link
             rel="canonical"
             href="https://portfolio-six-sooty-93.vercel.app/"
@@ -27,7 +33,10 @@ const { title } = Astro.props;
             property="og:title"
             content="Joan Cardozo | FullStack Web Developer"
         />
-        <meta property="og:image" content="https://portfolio-six-sooty-93.vercel.app/joancardozo.png" />
+        <meta
+            property="og:image"
+            content="https://portfolio-six-sooty-93.vercel.app/joancardozo.png"
+        />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="720" />
         <meta
@@ -52,7 +61,10 @@ const { title } = Astro.props;
             name="twitter:description"
             content="Amante de la tecnologia web"
         />
-        <meta name="twitter:image" content="https://portfolio-six-sooty-93.vercel.app/joancardozo.png" />
+        <meta
+            name="twitter:image"
+            content="https://portfolio-six-sooty-93.vercel.app/joancardozo.png"
+        />
         <meta
             name="twitter:image:alt"
             content="Joan Cardozo | FullStack Web Developer"
@@ -64,7 +76,9 @@ const { title } = Astro.props;
             <MiniProfile />
             <div id="Content">
                 <Navbar />
-                <slot />
+                <div id="ContentScroll">
+                    <slot />
+                </div>
             </div>
         </main>
     </body>
@@ -114,7 +128,9 @@ const { title } = Astro.props;
     }
 
     #Content {
+        transition: all 0.2s ease;
         width: calc(100% - 320px);
+        height: 100%;
         margin: 0 0 0 20px;
         position: relative;
         box-sizing: border-box;
@@ -128,7 +144,39 @@ const { title } = Astro.props;
     }
 
     #Content:hover nav {
+        transition: all 0.2s ease;
         border-bottom: var(--border-width) var(--border-style)
             var(--spice-border-active);
+    }
+
+    #ContentScroll {
+        height: calc(100% - 100px);
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    #ContentScroll::-webkit-scrollbar {
+        overflow: hidden;
+        width: 15px;
+        box-sizing: border-box;
+    }
+
+    #ContentScroll::-webkit-scrollbar-track {
+        background-color: transparent;
+        width: 15px;
+    }
+
+    #ContentScroll::-webkit-scrollbar-thumb {
+        border-top: 10px solid var(--backgroundColorMain);
+        border-bottom: 10px solid var(--backgroundColorMain);
+        border-left: 5px solid var(--backgroundColorMain);
+        border-right: 5px solid var(--backgroundColorMain);
+        background-color: #ffffff;
+        width: 2px;
+    }
+
+    #ContentScroll::-webkit-scrollbar-thumb:hover {
+        border-left: 3px solid var(--backgroundColorMain);
+        border-right: 3px solid var(--backgroundColorMain);
     }
 </style>
