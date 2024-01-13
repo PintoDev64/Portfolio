@@ -6,9 +6,14 @@ const translate = useTranslations(lang);
 ---
 
 <nav>
-    <div id="NavTitle">
-        <img src="/logo192.png" alt="Joan Sebastian Cardozo Salinas Logo" id="MilleniumLogoImg" />
-        <h1 id="Title">JOAN CARDOZO</h1>
+    <div id="NavLogo">
+        <img
+            src="/logo192.png"
+            alt="Joan Sebastian Cardozo Salinas Logo"
+            id="MilleniumLogoImg"
+            width="100px"
+            height="100px"
+        />
     </div>
     <div id="NavControls">
         <ul id="NavControlsList">
@@ -18,3 +23,55 @@ const translate = useTranslations(lang);
         </ul>
     </div>
 </nav>
+<style>
+    nav {
+        padding: 10px 0 10px 0;
+        display: flex;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-sizing: border-box;
+        border-bottom: var(--border-width) var(--border-style)
+            var(--spice-border-inactive);
+    }
+
+    #NavLogo {
+        width: 130px;
+        height: 80px;
+        display: grid;
+        place-items: center;
+    }
+
+    #MilleniumLogoImg {
+        width: 65px;
+        height: 65px;
+    }
+
+    #NavControls {
+        width: calc(100% - 130px);
+    }
+
+    #NavControlsList {
+        padding: 0;
+        display: flex;
+        margin: 0;
+        list-style: none;
+        justify-content: space-evenly;
+    }
+
+    .NavControlsList-Items {
+        width: 150px;
+        text-align: center;
+        height: 50px;
+        display: grid;
+        place-content: center;
+        transition: all .2s ease;
+        border-radius: 8px;
+    }
+
+    .NavControlsList-Items:hover {
+        background-color: var(--IconsLinks-Active);
+    }
+</style>
