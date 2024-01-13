@@ -18,7 +18,11 @@ const translate = useTranslations(lang);
     <div id="NavControls">
         <ul id="NavControlsList">
             <li class="NavControlsList-Items">
-                <h3>{translate("nav.about")}</h3>
+                <h3>
+                    <a href="#about">
+                        {translate("nav.about")}
+                    </a>
+                </h3>
             </li>
             <li class="NavControlsList-Items">
                 <h3>{translate("nav.experience")}</h3>
@@ -29,13 +33,15 @@ const translate = useTranslations(lang);
         </ul>
     </div>
     <div id="Navlang">
-        <img
-            src="https://portfolio-six-sooty-93.vercel.app/spanish.webp"
-            alt="Español Logo"
-            id="LanguageLogoImg"
-            width="65px"
-            height="65px"
-        />
+        <a href="https://portfolio-six-sooty-93.vercel.app/en">
+            <img
+                src={lang === "es" ? "https://portfolio-six-sooty-93.vercel.app/spanish.webp" : "https://portfolio-six-sooty-93.vercel.app/english.webp"}
+                alt="Español Logo"
+                id="LanguageLogoImg"
+                width="65px"
+                height="65px"
+            />
+        </a>
     </div>
 </nav>
 <style>
@@ -91,5 +97,9 @@ const translate = useTranslations(lang);
 
     .NavControlsList-Items:hover {
         background-color: var(--IconsLinks-Active);
+    }
+
+    .NavControlsList-Items a {
+        text-decoration: none;
     }
 </style>
