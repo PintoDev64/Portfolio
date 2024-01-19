@@ -97,7 +97,7 @@ const { title } = Astro.props;
         --backgroundColorMain: #121212;
 
         --border-radius: 0px;
-        --border-width: 2px;
+        --border-width: 3px;
         --border-style: solid;
         --spice-header: #535353;
         --spice-border-active: #ff0000;
@@ -113,7 +113,13 @@ const { title } = Astro.props;
     }
 
     body {
-        background-color: var(--backgroundColorMain);
+        background-image: radial-gradient(
+            ellipse 80% 80% at 50% -20%,
+            #7877c64d,
+            #fff0
+        ); /* var(--backgroundColorMain) */
+        --tw-bg-opacity: 1;
+        background-color: rgb(10 10 10 / var(--tw-bg-opacity));
         display: flex;
         margin: 0;
         width: 100vw;
@@ -134,12 +140,12 @@ const { title } = Astro.props;
         margin: 0 0 0 20px;
         position: relative;
         box-sizing: border-box;
-        border: var(--border-width) var(--border-style)
+        border-bottom: var(--border-width) var(--border-style)
             var(--spice-border-inactive);
     }
 
     #Content:hover {
-        border: var(--border-width) var(--border-style)
+        border-bottom: var(--border-width) var(--border-style)
             var(--spice-border-active);
     }
 
