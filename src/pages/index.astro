@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
             por el desarrollo web y buscando ampliar mis conocimientos :D
         </p>
         <a
-            href="https://portfolio-pintogamer64.vercel.app/Joan%20Cardozo%20CV.pdf"
+            href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
             rel="archives"
             id="about_cv"
         >
@@ -40,6 +40,52 @@ import Layout from "../layouts/Layout.astro";
     <div id="projects">
         <br />
         <h1 id="projects_title">Proyectos</h1>
+        <div id="projects_elements">
+            <div class="projects_element">
+                <div class="projects_element_content">
+                    <div class="projects_element_content_title">
+                        <h2>PngtubeStudio</h2>
+                        <img src="" alt="PngtubeStudio Technologies"/>
+                    </div>
+                    <div class="projects_element_content_dates">
+                        <h3>Noviembre 2023 - <span>Actualidad</span></h3>
+                    </div>
+                    <div class="projects_element_content_descripcion">
+                        <p>
+                            Este proyecto busca ser una alternativa para
+                            Pngtubers, integrando herramientas más dedicadas a
+                            dicho formato, buscando ser un programa basado en la
+                            comunidad.
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_element_image">
+                    <img src="https://portfolio-six-sooty-93.vercel.app/PngtubeStudio.webp" alt="PngtubeStudio" width="150px" height="150px"/>
+                </div>
+            </div>
+            <div class="projects_element">
+                <div class="projects_element_content">
+                    <div class="projects_element_content_title">
+                        <h2>Classroom Uniminuto</h2>
+                        <img src="" alt="Classroom Uniminuto Technologies" />
+                    </div>
+                    <div class="projects_element_content_dates">
+                        <h3>Octubre 2023 - <span>Pausado</span></h3>
+                    </div>
+                    <div class="projects_element_content_descripcion">
+                        <p>
+                            Busca actualizar el apartado visual de la plataforma
+                            virtual de la UNIMINUTO Aula Virtual, buscando dar
+                            una mejor experiencia de usuario en interactividad,
+                            reactividad, compatibilidad móvil, etc.
+                        </p>
+                    </div>
+                </div>
+                <div class="projects_element_image">
+                    <img src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp" alt="Classroom Uniminuto" width="150px" height="150px"/>
+                </div>
+            </div>
+        </div>
     </div>
     <style>
         #about_cv {
@@ -56,16 +102,11 @@ import Layout from "../layouts/Layout.astro";
             justify-content: center;
             font-size: large;
         }
-
         #about_cv p {
             margin: 0 10px 0 0;
         }
-
         #about_cv:hover {
             background-color: var(--spice-border-active);
-        }
-
-        #experience_title {
         }
         #experience_jobs {
             list-style: none;
@@ -96,6 +137,59 @@ import Layout from "../layouts/Layout.astro";
             margin: 0;
         }
         .experience_job_text {
+            text-wrap: pretty;
+        }
+
+        #projects_elements {
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+        .projects_element {
+            display: flex;
+            height: 150px;
+            background-color: var(--IconsLinks-Active);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .projects_element:nth-child(even) {
+            margin: 10px 0;
+        }
+        .projects_element_content {
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .projects_element_content_title {
+            display: flex;
+        }
+        .projects_element_content_title h2 {
+            font-size: larger;
+            margin: 0;
+        }
+        .projects_element_content_title img {
+        }
+        .projects_element_content_dates {
+            display: flex;
+            align-items: center;
+        }
+        .projects_element_content_dates h3 {
+            font-size: medium;
+            font-weight: 100;
+            font-style: italic;
+            margin: 0;
+        }
+        .projects_element_content_dates span {
+        }
+        .projects_element_content_descripcion {
+        }
+        .projects_element_content_descripcion p {
+        }
+        .projects_element_image {
+            width: 150px;
+            height: 150px;
+        }
+        .projects_element_image img {
+            width: 150px;
+            height: 150px;
         }
     </style>
 </Layout>
