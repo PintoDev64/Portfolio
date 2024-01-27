@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import MiniProfile from "../components/MiniProfile.astro";
+import {  } from '@vercel/analytics/server'
 
 interface Props {
     title: string;
@@ -101,7 +102,7 @@ const { title } = Astro.props;
         --border-style: solid;
         --spice-header: #535353;
         --spice-border-active: #ff0000;
-        --spice-border-inactive: #535353;
+        --spice-border-active-t: #ff000081;
 
         --IconsLinks-Active: #1a1a1a;
         --IconsLinks-Inactive: transparent;
@@ -141,7 +142,7 @@ const { title } = Astro.props;
         position: relative;
         box-sizing: border-box;
         border-bottom: var(--border-width) var(--border-style)
-            var(--spice-border-inactive);
+            var(--spice-border-active);
     }
 
     #Content:hover {
@@ -158,7 +159,10 @@ const { title } = Astro.props;
     #ContentScroll {
         height: calc(100% - 100px);
         overflow: hidden;
+        box-sizing: border-box;
         overflow-y: auto;
+        text-wrap: balance;
+        padding: 0 20px;
     }
 
     #ContentScroll::-webkit-scrollbar {

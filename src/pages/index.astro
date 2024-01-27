@@ -1,161 +1,101 @@
 ---
+import PDFRedirect from "../components/icons/PDFRedirect.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Joan Cardozo | Portafolio Web">
-    ddkujsahdjkashdjkashdjkahdjkahdkas
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <div id="about">
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-        ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
+        <br />
+        <h1 id="about_title">Sobre Mi</h1>
+        <p id="about_text">
+            Estudainte de Ingenieria de Sistemas con conocimentos en diseño,
+            creacion y optimizacion de paginas y aplicaciones web, apasionado
+            por el desarrollo web y buscando ampliar mis conocimientos :D
+        </p>
+        <a
+            href="https://portfolio-pintogamer64.vercel.app/Joan%20Cardozo%20CV.pdf"
+            rel="archives"
+            id="about_cv"
+        >
+            <p>Curriculum</p>
+            <PDFRedirect />
+        </a>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd ljfhjkdfhjkdsahfjksdhfjkashfjkshfkshfjksd
+    <div id="experience">
+        <br />
+        <h1 id="experience_title">Experiencia</h1>
+        <ul id="experience_jobs">
+            <li class="experience_job">
+                <h2 class="experience_job_title">Trainee | Practicante SENA</h2>
+                <h3 class="experience_job_company">
+                    NETLOGISTIK | Octubre 2022 - Abril 2023
+                </h3>
+                <p class="experience_job_text">
+                    Participe en el desarrollo de herramientas que aceleren el
+                    empaquetado de comandos para la plataforma de BlueYonder
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div id="projects">
+        <br />
+        <h1 id="projects_title">Proyectos</h1>
+    </div>
+    <style>
+        #about_cv {
+            transition: all 0.2s ease;
+            display: flex;
+            text-align: center;
+            width: 200px;
+            height: 45px;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 3px solid var(--spice-border-active-t);
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+
+        #about_cv p {
+            margin: 0 10px 0 0;
+        }
+
+        #about_cv:hover {
+            background-color: var(--spice-border-active);
+        }
+
+        #experience_title {
+        }
+        #experience_jobs {
+            list-style: none;
+        }
+        .experience_job {
+            position: relative;
+        }
+        .experience_job:after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: var(--spice-border-active);
+            top: 17px;
+            left: -27px;
+        }
+        .experience_job_title {
+            font-size: larger;
+        }
+        .experience_job_company {
+            font-size: medium;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .experience_job_title,
+        .experience_job_company {
+            margin: 0;
+        }
+        .experience_job_text {
+        }
+    </style>
 </Layout>
