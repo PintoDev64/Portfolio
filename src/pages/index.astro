@@ -42,51 +42,89 @@ import Layout from "../layouts/Layout.astro";
         <h1 id="projects_title">Proyectos</h1>
         <div id="projects_elements">
             <div class="projects_element">
-                <div class="projects_element_content">
-                    <div class="projects_element_content_title">
-                        <h2>PngtubeStudio</h2>
-                        <img src="" alt="PngtubeStudio Technologies"/>
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>PngtubeStudio</h2>
+                            <!-- <img src="" alt="PngtubeStudio Technologies" /> -->
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>
+                                Noviembre 2023 - <span class="continue"
+                                    >Desarrollando</span
+                                >
+                            </h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                Este proyecto busca ser una alternativa para
+                                Pngtubers, integrando herramientas más dedicadas
+                                a dicho formato, buscando ser un programa basado
+                                en la comunidad.
+                            </p>
+                        </div>
                     </div>
-                    <div class="projects_element_content_dates">
-                        <h3>Noviembre 2023 - <span>Actualidad</span></h3>
-                    </div>
-                    <div class="projects_element_content_descripcion">
-                        <p>
-                            Este proyecto busca ser una alternativa para
-                            Pngtubers, integrando herramientas más dedicadas a
-                            dicho formato, buscando ser un programa basado en la
-                            comunidad.
-                        </p>
+                    <div class="projects_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/PngtubeStudio.webp"
+                            alt="PngtubeStudio"
+                            width="150px"
+                            height="150px"
+                        />
                     </div>
                 </div>
-                <div class="projects_element_image">
-                    <img src="https://portfolio-six-sooty-93.vercel.app/PngtubeStudio.webp" alt="PngtubeStudio" width="150px" height="150px"/>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <a
+                        href="https://github.com/PintoGamer64/PngtubeStudio"
+                        rel="external">GitHub</a
+                    >
                 </div>
             </div>
             <div class="projects_element">
-                <div class="projects_element_content">
-                    <div class="projects_element_content_title">
-                        <h2>Classroom Uniminuto</h2>
-                        <img src="" alt="Classroom Uniminuto Technologies" />
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>Classroom Uniminuto</h2>
+                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>
+                                Octubre 2023 - <span class="pause">Pausado</span
+                                >
+                            </h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                Busca actualizar el apartado visual de la
+                                plataforma de educacion virtual virtual de la
+                                UNIMINUTO Aula Virtual, brindando una mejor
+                                experiencia de usuario.
+                            </p>
+                        </div>
                     </div>
-                    <div class="projects_element_content_dates">
-                        <h3>Octubre 2023 - <span>Pausado</span></h3>
-                    </div>
-                    <div class="projects_element_content_descripcion">
-                        <p>
-                            Busca actualizar el apartado visual de la plataforma
-                            virtual de la UNIMINUTO Aula Virtual, buscando dar
-                            una mejor experiencia de usuario en interactividad,
-                            reactividad, compatibilidad móvil, etc.
-                        </p>
+                    <div class="projects_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp"
+                            alt="Classroom Uniminuto"
+                            width="150px"
+                            height="150px"
+                        />
                     </div>
                 </div>
-                <div class="projects_element_image">
-                    <img src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp" alt="Classroom Uniminuto" width="150px" height="150px"/>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <a
+                        href="https://github.com/PintoGamer64/Classroom_Uniminuto"
+                        rel="external">GitHub</a
+                    >
                 </div>
             </div>
         </div>
     </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+    />
+    <br /><br /><br /><br /><br /><br />
     <style>
         #about_cv {
             transition: all 0.2s ease;
@@ -126,37 +164,67 @@ import Layout from "../layouts/Layout.astro";
         }
         .experience_job_title {
             font-size: larger;
+            margin: 0;
         }
         .experience_job_company {
             font-size: medium;
             font-weight: 100;
             font-style: italic;
-        }
-        .experience_job_title,
-        .experience_job_company {
-            margin: 0;
+            margin: 10px 0 0 0;
         }
         .experience_job_text {
-            text-wrap: pretty;
+            margin: 10px 0 0 0;
+            font-size: 13.5px;
+            text-wrap: wrap;
         }
 
         #projects_elements {
             box-sizing: border-box;
-            padding: 0 20px;
+            padding: 0 10px;
         }
         .projects_element {
             display: flex;
-            height: 150px;
+            height: 200px;
             background-color: var(--IconsLinks-Active);
             border-radius: 8px;
             overflow: hidden;
+            flex-direction: column;
         }
         .projects_element:nth-child(even) {
             margin: 10px 0;
         }
+        .projects_element_data {
+            height: 150px;
+            display: flex;
+        }
+        .projects_element_secundary {
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .projects_element_secundary a {
+            transition: all 0.2s ease;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--spice-header);
+            font-weight: bold;
+            font-size: large;
+        }
+        .projects_element_secundary a:hover {
+            background: var(--colorText);
+            color: #000000;
+        }
+        .projects_element_separator {
+            width: 100%;
+            margin: 0;
+            border: 1px solid #ffffff;
+        }
         .projects_element_content {
             box-sizing: border-box;
-            padding: 10px;
+            padding: 20px;
         }
         .projects_element_content_title {
             display: flex;
@@ -175,13 +243,24 @@ import Layout from "../layouts/Layout.astro";
             font-size: medium;
             font-weight: 100;
             font-style: italic;
-            margin: 0;
+            margin: 10px 0 0 0;
         }
         .projects_element_content_dates span {
+            padding: 2.5px 10px;
+            border-radius: 5px;
+        }
+        .projects_element_content_dates span.continue {
+            background-color: #0016ff;
+        }
+        .projects_element_content_dates span.pause {
+            background-color: #ff0000;
         }
         .projects_element_content_descripcion {
         }
         .projects_element_content_descripcion p {
+            margin: 10px 0 0 0;
+            font-size: 13.5px;
+            text-wrap: wrap;
         }
         .projects_element_image {
             width: 150px;
