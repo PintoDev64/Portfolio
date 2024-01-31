@@ -1,6 +1,296 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import PDFRedirect from "../../components/icons/PDFRedirect.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Joan Cardozo | Web Portfolio">
+    <div id="about">
+        <br />
+        <h1 id="about_title">About me</h1>
+        <p id="about_text">
+            Systems Engineering student with knowledge in design, creation and optimization of pages and web applications, passionate about web development and looking to expand my knowledge :D
+        </p>
+        <a
+            href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
+            rel="archives"
+            id="about_cv"
+        >
+            <p>Currículum</p>
+            <PDFRedirect />
+        </a>
+    </div>
+    <div id="experience">
+        <br />
+        <h1 id="experience_title">Experience</h1>
+        <ul id="experience_jobs">
+            <li class="experience_job">
+                <h2 class="experience_job_title">Trainee | SENA Intern</h2>
+                <h3 class="experience_job_company">
+                    NETLOGISTIK | October 2022 - April 2023
+                </h3>
+                <p class="experience_job_text">
+                    Participate in the development of tools that accelerate command packaging for the BlueYonder platform
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div id="projects">
+        <br />
+        <h1 id="projects_title">Proyectos</h1>
+        <div id="projects_elements">
+            <div class="projects_element">
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>PngtubeStudio</h2>
+                            <!-- <img src="" alt="PngtubeStudio Technologies" /> -->
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>
+                                November 2023 - <span class="continue"
+                                    >Developing</span
+                                >
+                            </h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                This project seeks to be an alternative to Pngtubers, integrating tools more dedicated to said format, seeking to be a community-based program.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/PngtubeStudio.webp"
+                            alt="PngtubeStudio"
+                            width="150px"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <a
+                        href="https://github.com/PintoGamer64/PngtubeStudio"
+                        rel="external">GitHub</a
+                    >
+                </div>
+            </div>
+            <div class="projects_element">
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>Noob A Pro</h2>
+                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>
+                                October 2023 - <span class="continue"
+                                    >Developing</span
+                                >
+                            </h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                System to send demos/games/games of the video game Counter Strike 2 to the Znorux YouTube channel for a video series called "From Noob to Pro"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/Znorux.webp"
+                            alt="De Noob a Pro | Znorux | Analizando partidas de suscriptores"
+                            width="150px"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <a href="https://noobapro.xyz" rel="external">Website</a>
+                </div>
+            </div>
+            <div class="projects_element">
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>Classroom Uniminuto</h2>
+                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>
+                                October 2023 - <span class="pause">Slow</span
+                                >
+                            </h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                It seeks to update the visual section of the UNIMINUTO virtual education platform "Virtual Classroom", providing a better user experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp"
+                            alt="Classroom Uniminuto"
+                            width="150px"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <a
+                        href="https://github.com/PintoGamer64/Classroom_Uniminuto"
+                        rel="external">GitHub</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #about_cv {
+            transition: all 0.2s ease;
+            display: flex;
+            text-align: center;
+            width: 200px;
+            height: 45px;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 3px solid var(--spice-border-active-t);
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+        }
+        #about_cv p {
+            margin: 0 10px 0 0;
+        }
+        #about_cv:hover {
+            background-color: var(--spice-border-active);
+        }
+        #experience_jobs {
+            list-style: none;
+        }
+        .experience_job {
+            position: relative;
+        }
+        .experience_job:after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--spice-border-active);
+            top: 17px;
+            left: -27px;
+        }
+        .experience_job_title {
+            font-size: larger;
+            margin: 0;
+        }
+        .experience_job_company {
+            font-size: medium;
+            font-weight: 100;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+        .experience_job_text {
+            margin: 10px 0 0 0;
+            font-size: 13.5px;
+            text-wrap: wrap;
+        }
+
+        #projects_elements {
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        .projects_element {
+            display: flex;
+            height: 200px;
+            background-color: var(--IconsLinks-Active);
+            border-radius: 8px;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .projects_element:nth-child(even) {
+            margin: 10px 0;
+        }
+        .projects_element_data {
+            height: 150px;
+            display: flex;
+        }
+        .projects_element_secundary {
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .projects_element_secundary a {
+            transition: all 0.2s ease;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--spice-header);
+            font-weight: bold;
+            font-size: large;
+        }
+        .projects_element_secundary a:hover {
+            background: var(--colorText);
+            color: #000000;
+        }
+        .projects_element_separator {
+            width: 100%;
+            margin: 0;
+            border: 1px solid #ffffff;
+        }
+        .projects_element_content {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .projects_element_content_title {
+            display: flex;
+        }
+        .projects_element_content_title h2 {
+            font-size: larger;
+            margin: 0;
+        }
+        .projects_element_content_title img {
+        }
+        .projects_element_content_dates {
+            display: flex;
+            align-items: center;
+        }
+        .projects_element_content_dates h3 {
+            font-size: medium;
+            font-weight: 100;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+        .projects_element_content_dates span {
+            padding: 2.5px 10px;
+            border-radius: 5px;
+        }
+        .projects_element_content_dates span.continue {
+            background-color: #0016ff;
+        }
+        .projects_element_content_dates span.pause {
+            background-color: #ff0000;
+        }
+        .projects_element_content_descripcion {
+        }
+        .projects_element_content_descripcion p {
+            margin: 10px 0 0 0;
+            font-size: 13.5px;
+            text-wrap: wrap;
+        }
+        .projects_element_image {
+            width: 150px;
+            height: 150px;
+        }
+        .projects_element_image img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </Layout>
