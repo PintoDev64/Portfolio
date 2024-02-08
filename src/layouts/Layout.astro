@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import MiniProfile from "../components/MiniProfile.astro";
+import SpeedInsights from "@vercel/speed-insights/astro"
 
 interface Props {
     title: string;
@@ -73,6 +74,7 @@ const { title, canonical } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
+        <SpeedInsights />
         <main>
             <MiniProfile />
             <div id="Content">
