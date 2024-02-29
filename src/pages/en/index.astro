@@ -34,6 +34,18 @@ import Layout from "../../layouts/Layout.astro";
             </li>
         </ul>
     </div>
+    <div id="studies">
+        <br />
+        <h1 id="studies_title">Studies</h1>
+        <ul id="studies_jobs">
+            <li class="studies_job">
+                <h2 class="studies_job_title">Systems Engineer</h2>
+                <h3 class="studies_job_company">
+                    Minuto De Dios University Corporation | July 2023 – Present
+                </h3>
+            </li>
+        </ul>
+    </div>
     <div id="projects">
         <br />
         <h1 id="projects_title">Proyectos</h1>
@@ -168,12 +180,15 @@ import Layout from "../../layouts/Layout.astro";
         #about_cv:hover {
             background-color: var(--spice-border-active);
         }
+        #studies_jobs,
         #experience_jobs {
             list-style: none;
         }
+        .studies_job,
         .experience_job {
             position: relative;
         }
+        .studies_job:after,
         .experience_job:after {
             content: "";
             position: absolute;
@@ -184,16 +199,19 @@ import Layout from "../../layouts/Layout.astro";
             top: 17px;
             left: -27px;
         }
+        .studies_job_title,
         .experience_job_title {
             font-size: larger;
             margin: 0;
         }
+        .studies_job_company,
         .experience_job_company {
             font-size: medium;
             font-weight: 100;
             font-style: italic;
             margin: 10px 0 0 0;
         }
+        .studies_job_text,
         .experience_job_text {
             margin: 10px 0 0 0;
             font-size: 13.5px;
