@@ -5,7 +5,7 @@ import Linkedin from "./icons/Linkedin.astro";
 import Mail from "./icons/Mail.astro";
 ---
 
-<aside>
+<aside id="aside">
     <div id="MiniProfileMain">
         <img
             src="https://portfolio-six-sooty-93.vercel.app/profilepicture.webp"
@@ -73,8 +73,9 @@ import Mail from "./icons/Mail.astro";
     </div>
 </aside>
 <style>
-    aside {
+    #aside {
         overflow: hidden;
+        left: 0;
         overflow-y: overlay;
         transition: all 0.2s ease;
         position: relative;
@@ -84,11 +85,11 @@ import Mail from "./icons/Mail.astro";
         height: 100%;
     }
 
-    aside::-webkit-scrollbar {
+    #aside::-webkit-scrollbar {
         width: 0;
     }
 
-    aside::before {
+    #aside::before {
         transition: all 0.2s ease;
         content: "PINTOGAMER";
         color: var(--colorText);
@@ -99,7 +100,7 @@ import Mail from "./icons/Mail.astro";
         padding: 0 10px;
     }
 
-    aside:hover::before {
+    #aside:hover::before {
         color: var(--spice-border-active);
     }
 
@@ -145,7 +146,7 @@ import Mail from "./icons/Mail.astro";
     }
 
     #MiniProfileComplement-Links {
-        margin: 16px 0 0 0 ;
+        margin: 16px 0 0 0;
         list-style: none;
         display: flex;
         padding: 0;
@@ -173,5 +174,42 @@ import Mail from "./icons/Mail.astro";
 
     .MiniProfileComplement-LinksItems:hover {
         background-color: var(--IconsLinks-Active);
+    }
+
+    @media screen and (max-width: 1200px) {
+        #aside {
+            background-image: radial-gradient(
+                ellipse 80% 80% at 50% -20%,
+                #7877c64d,
+                #fff0
+            ); /* var(--backgroundColorMain) */
+            --tw-bg-opacity: 1;
+            background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+            left: -370px;
+            overflow: hidden;
+            overflow-y: overlay;
+            transition: all 0.2s ease;
+            position: absolute;
+            box-sizing: border-box;
+            padding: 25px 10px;
+            z-index: 1;
+            width: 370px;
+            height: 100%;
+        }
+
+        main {
+            display: flex;
+        }
+
+        #Content {
+            transition: all 0.2s ease;
+            width: calc(100% - 320px);
+            height: 100%;
+            margin: 0 0 0 20px;
+            position: relative;
+            box-sizing: border-box;
+            border-bottom: var(--border-width) var(--border-style)
+                var(--spice-border-active);
+        }
     }
 </style>

@@ -1,7 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import MiniProfile from "../components/MiniProfile.astro";
-import SpeedInsights from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
     title: string;
@@ -25,10 +25,7 @@ const { title, canonical } = Astro.props;
             rel="manifest"
             href="https://portfolio-six-sooty-93.vercel.app/manifest.json"
         />
-        <link
-            rel="canonical"
-            href={canonical}
-        />
+        <link rel="canonical" href={canonical} />
         <meta name="description" content="Amante de la tecnologia web" />
         <meta name="viewport" content="width=device-width" />
         <meta
@@ -180,5 +177,39 @@ const { title, canonical } = Astro.props;
 
     #ContentScroll::-webkit-scrollbar-thumb {
         background-color: #ffffff;
+    }
+
+    @media screen and (max-width: 1200px) {
+        main {
+            margin: 5px 0 25px 0;
+        }
+
+        #Content {
+            transition: all 0.2s ease;
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            border-bottom: var(--border-width) var(--border-style)
+                var(--spice-border-active);
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        main {
+            margin: 5px 0 25px 0;
+        }
+
+        #Content {
+            transition: all 0.2s ease;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+            border-bottom: var(--border-width) var(--border-style)
+                var(--spice-border-active);
+        }
     }
 </style>

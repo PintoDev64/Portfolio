@@ -1,14 +1,79 @@
 ---
+import Facebook from "../components/icons/Facebook.astro";
+import Github from "../components/icons/Github.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Mail from "../components/icons/Mail.astro";
 import PDFRedirect from "../components/icons/PDFRedirect.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Joan Cardozo | Portafolio Web" canonical="https://portfolio-six-sooty-93.vercel.app/">
+<Layout
+    title="Joan Cardozo | Portafolio Web"
+    canonical="https://portfolio-six-sooty-93.vercel.app/"
+>
+    <div id="presentation">
+        <div id="presentation_aside">
+            <div id="MiniProfileMain">
+                <img
+                    src="https://portfolio-six-sooty-93.vercel.app/profilepicture.webp"
+                    alt="Joan Sebastian Cardozo Salinas"
+                    width="250px"
+                    id="MiniProfileMainPicture"
+                />
+            </div>
+            <div id="MiniProfileComplement">
+                <h2 id="MiniProfileMainName">JOAN SEBASTIAN CARDOZO SALINAS</h2>
+                <p id="MiniProfileMainDescription">FullStack Web Developer</p>
+                <ul id="MiniProfileComplement-Links">
+                    <li class="MiniProfileComplement-LinksItems">
+                        <a
+                            href="https://www.facebook.com/joansebastian.cardozosalinas.92"
+                            rel="external"
+                            id="FacebookLink"
+                            aria-label="Mas sobre mi en Facebook"
+                        >
+                            <Facebook />
+                        </a>
+                    </li>
+                    <li class="MiniProfileComplement-LinksItems">
+                        <a
+                            href="https://github.com/PintoGamer64"
+                            rel="external"
+                            id="GithubLink"
+                            aria-label="Mas de mis proyectos en Github"
+                        >
+                            <Github />
+                        </a>
+                    </li>
+                    <li class="MiniProfileComplement-LinksItems">
+                        <a
+                            href="https://www.linkedin.com/in/joancardozo/"
+                            rel="external"
+                            id="LinkedinLink"
+                            aria-label="Mas sobre mi experiencia en Linkedin"
+                        >
+                            <Linkedin />
+                        </a>
+                    </li>
+                    <li class="MiniProfileComplement-LinksItems">
+                        <a
+                            href="mailto:cardozojoan13@gmail.com"
+                            rel="external"
+                            id="MailLink"
+                            aria-label="Escribeme por correo si quieres contactarme"
+                        >
+                            <Mail />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div id="about">
         <br />
         <h1 id="about_title">Sobre Mi</h1>
         <p id="about_text">
-            Estudainte de Ingenieria de Sistemas con conocimentos en diseño,
+            Estudiante de Ingenieria de Sistemas con conocimentos en diseño,
             creacion y optimizacion de paginas y aplicaciones web, apasionado
             por el desarrollo web y buscando ampliar mis conocimientos :D
         </p>
@@ -44,7 +109,8 @@ import Layout from "../layouts/Layout.astro";
             <li class="studies_job">
                 <h2 class="studies_job_title">Ingenieria de Sistemas</h2>
                 <h3 class="studies_job_company">
-                    Corporacion Universitaria Minuto De Dios | Julio 2023 – Actualidad
+                    Corporacion Universitaria Minuto De Dios | Julio 2023 –
+                    Actualidad
                 </h3>
             </li>
         </ul>
@@ -62,7 +128,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
-                                Noviembre 2023 - <span class="continue"
+                                Noviembre 2023 <span class="continue"
                                     >Desarrollando</span
                                 >
                             </h3>
@@ -102,7 +168,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
-                                Octubre 2023 - <span class="continue"
+                                Octubre 2023 <span class="continue"
                                     >Desarrollando</span
                                 >
                             </h3>
@@ -139,8 +205,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
-                                Octubre 2023 - <span class="pause">Pausado</span
-                                >
+                                Octubre 2023 <span class="pause">Pausado</span>
                             </h3>
                         </div>
                         <div class="projects_element_content_descripcion">
@@ -172,6 +237,92 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
     <style>
+        #presentation {
+            display: none;
+        }
+        #presentation_aside {
+            overflow: hidden;
+            left: 0;
+            display: flex;
+            overflow-y: overlay;
+            transition: all 0.2s ease;
+            position: relative;
+            box-sizing: border-box;
+            width: 90%;
+            padding: 25px 10px 0;
+            align-items: center;
+        }
+
+        #MiniProfileMain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #MiniProfileMainPicture {
+            transition: all 0.2s ease;
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        #MiniProfileMainName,
+        #MiniProfileMainDescription {
+            text-align: center;
+            margin: 20px 0 0 0;
+            width: 300px;
+        }
+
+        #MiniProfileMainName {
+            font-size: 17px;
+            font-weight: 200;
+            text-align: center;
+        }
+
+        #MiniProfileComplement {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #MiniProfileComplement-SpotifyActivity {
+            transition: all 0.2s ease;
+            width: 280px;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: var(--IconsLinks-Active);
+        }
+
+        #MiniProfileComplement-Links {
+            margin: 16px 0 0 0;
+            list-style: none;
+            display: flex;
+            padding: 0;
+            width: 300px;
+            justify-content: space-evenly;
+        }
+
+        #FacebookLink,
+        #GithubLink,
+        #LinkedinLink,
+        #MailLink {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .MiniProfileComplement-LinksItems {
+            transition: all 0.2s ease;
+            width: 60px;
+            border-radius: 8px;
+            height: 60px;
+            background-color: var(--IconsLinks-Inactive);
+        }
+
+        .MiniProfileComplement-LinksItems:hover {
+            background-color: var(--IconsLinks-Active);
+        }
         #about_cv {
             transition: all 0.2s ease;
             display: flex;
@@ -305,7 +456,7 @@ import Layout from "../layouts/Layout.astro";
             background-color: #0016ff;
         }
         .projects_element_content_dates span.pause {
-            background-color: #B30000;
+            background-color: #b30000;
         }
         .projects_element_content_descripcion {
         }
@@ -321,6 +472,33 @@ import Layout from "../layouts/Layout.astro";
         .projects_element_image img {
             width: 150px;
             height: 150px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            #presentation {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            #presentation_aside {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 575px) {
+            .projects_element {
+                height: auto;
+            }
+            .projects_element_data {
+                height: auto;
+            }
+
+            .projects_element_content_dates h3 {
+                line-height: 1.5;
+            }
         }
     </style>
 </Layout>

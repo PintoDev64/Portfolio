@@ -3,8 +3,6 @@ import { getLangFromUrl, useTranslations } from "../utils/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translate = useTranslations(lang);
-
-console.log(lang);
 ---
 
 <nav>
@@ -127,5 +125,18 @@ console.log(lang);
         place-items: center;
         height: 100%;
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+        #NavLogo-Button {
+            z-index: 1;
+            position: absolute;
+            background: transparent;
+            border: none;
+        }
+
+        #NavControls {
+            display: none;
+        }
     }
 </style>
