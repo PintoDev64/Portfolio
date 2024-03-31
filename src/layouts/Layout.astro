@@ -194,6 +194,16 @@ const { title, canonical } = Astro.props;
             border-bottom: var(--border-width) var(--border-style)
                 var(--spice-border-active);
         }
+
+        #ContentScroll {
+            padding: 0 10px 30px;
+        }
+
+        #ContentScroll::-webkit-scrollbar {
+            overflow: hidden;
+            width: 0px;
+            box-sizing: border-box;
+        }
     }
 
     @media screen and (max-width: 800px) {
