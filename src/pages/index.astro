@@ -127,7 +127,7 @@ import Layout from "../layouts/Layout.astro";
                         </div>
                         <div class="jobs_element_content_dates">
                             <h3>
-                                <span class="complete">Abril 2024</span>
+                                Diseño <span class="complete">Abril 2024</span>
                             </h3>
                         </div>
                         <div class="jobs_element_content_descripcion">
@@ -136,7 +136,7 @@ import Layout from "../layouts/Layout.astro";
                                     href="https://www.youtube.com/@Tenma21"
                                     target="_blank"
                                     rel="noopener noreferrer">Final Tenma</a
-                                >, se requirio un rediseño de su seccion de
+                                >, se acordo un rediseño de su seccion de
                                 reseñas de estudiantes para mostrar todos los
                                 datos basado en el videojuego Blue Archive
                             </p>
@@ -204,87 +204,15 @@ import Layout from "../layouts/Layout.astro";
                     >
                 </div>
             </div>
-            <!--             <div class="projects_element">
-                <div class="projects_element_data">
-                    <div class="projects_element_content">
-                        <div class="projects_element_content_title">
-                            <h2>Noob A Pro</h2>
-                        </div>
-                        <div class="projects_element_content_dates">
-                            <h3>
-                                Octubre 2023 <span class="continue"
-                                    >Desarrollando</span
-                                >
-                            </h3>
-                        </div>
-                        <div class="projects_element_content_descripcion">
-                            <p>
-                                Sistema para enviar demos/partidas/juegos del
-                                videojuego Counter Strike 2 al canal de Youtube
-                                Znorux para una serie de videos llamada "De Noob
-                                a Pro"
-                            </p>
-                        </div>
-                    </div>
-                    <div class="projects_element_image">
-                        <img
-                            src="https://portfolio-six-sooty-93.vercel.app/Znorux.webp"
-                            alt="De Noob a Pro | Znorux | Analizando partidas de suscriptores"
-                            width="150px"
-                            height="150px"
-                        />
-                    </div>
-                </div>
-                <hr class="projects_element_separator" />
-                <div class="projects_element_secundary">
-                    <a href="https://noobapro.xyz" rel="external"> Sitio Web</a>
-                </div>
-            </div>
-            <div class="projects_element">
-                <div class="projects_element_data">
-                    <div class="projects_element_content">
-                        <div class="projects_element_content_title">
-                            <h2>Classroom Uniminuto</h2>
-                        </div>
-                        <div class="projects_element_content_dates">
-                            <h3>
-                                Octubre 2023 <span class="pause">Pausado</span>
-                            </h3>
-                        </div>
-                        <div class="projects_element_content_descripcion">
-                            <p>
-                                Busca actualizar el apartado visual de la
-                                plataforma de educacion virtual de la UNIMINUTO
-                                "Aula Virtual", brindando una mejor experiencia
-                                de usuario.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="projects_element_image">
-                        <img
-                            src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp"
-                            alt="Classroom Uniminuto"
-                            width="150px"
-                            height="150px"
-                        />
-                    </div>
-                </div>
-                <hr class="projects_element_separator" />
-                <div class="projects_element_secundary">
-                    <a
-                        href="https://github.com/PintoGamer64/Classroom_Uniminuto"
-                        rel="external">GitHub</a
-                    >
-                </div>
-            </div> -->
         </div>
     </div>
     <style>
         #presentation {
             overflow: hidden;
+            overflow-y: hidden;
             height: 0;
             display: flex;
-            transition: all 0.2s ease;
+            transition: all 0.1s ease;
         }
         #presentation_aside {
             overflow: hidden;
@@ -587,11 +515,35 @@ import Layout from "../layouts/Layout.astro";
             }
             .jobs_element_image {
                 aspect-ratio: 16/9;
+                height: auto;
                 width: 100%;
             }
             .jobs_element_image img {
                 aspect-ratio: 16/9;
+                height: auto;
                 width: 100%;
+            }
+            .projects_element_secundary,
+            .jobs_element_secundary {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                padding: 0;
+                align-items: center;
+            }
+            .projects_element_secundary a,
+            .jobs_element_secundary a {
+                width: 100%;
+                height: 100%;
+                transition: all 0.2s ease;
+                text-decoration: none;
+                align-content: center;
+                text-align: center;
+                border: none;
+                padding: 0;
+                border-radius: 0;
+                font-weight: bold;
+                font-size: large;
             }
         }
 

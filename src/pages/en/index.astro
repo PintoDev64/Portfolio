@@ -114,6 +114,51 @@ import Layout from "../../layouts/Layout.astro";
             </li>
         </ul>
     </div>
+    <div id="jobs">
+        <br />
+        <h1 id="jobs_title">Comisiones</h1>
+        <div id="jobs_elements">
+            <div class="jobs_element">
+                <div class="jobs_element_data">
+                    <div class="jobs_element_content">
+                        <div class="jobs_element_content_title">
+                            <h2>Review de Estudiantes Blue Archive</h2>
+                        </div>
+                        <div class="jobs_element_content_dates">
+                            <h3>
+                                Diseño <span class="complete">Abril 2024</span>
+                            </h3>
+                        </div>
+                        <div class="jobs_element_content_descripcion">
+                            <p>
+                                Requested by <a
+                                    href="https://www.youtube.com/@Tenma21"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Final Tenma</a
+                                >, a redesign of its student reviews section was
+                                agreed to show all the data based on the Blue
+                                Archive video game
+                            </p>
+                        </div>
+                    </div>
+                    <div class="jobs_element_image">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/DesingBlueArchiveReviews.png"
+                            alt="Desing Blue Archive Reviews"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="jobs_element_separator" />
+                <div class="jobs_element_secundary">
+                    <a
+                        href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
+                        rel="external">Ejemplo de Uso</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="projects">
         <br />
         <h1 id="projects_title">Proyectos</h1>
@@ -157,82 +202,15 @@ import Layout from "../../layouts/Layout.astro";
                     >
                 </div>
             </div>
-            <!-- <div class="projects_element">
-                <div class="projects_element_data">
-                    <div class="projects_element_content">
-                        <div class="projects_element_content_title">
-                            <h2>Noob A Pro</h2>
-                        </div>
-                        <div class="projects_element_content_dates">
-                            <h3>
-                                October 2023 - <span class="continue"
-                                    >Developing</span
-                                >
-                            </h3>
-                        </div>
-                        <div class="projects_element_content_descripcion">
-                            <p>
-                                System to send demos/games/games of the video game Counter Strike 2 to the Znorux YouTube channel for a video series called "From Noob to Pro"
-                            </p>
-                        </div>
-                    </div>
-                    <div class="projects_element_image">
-                        <img
-                            src="https://portfolio-six-sooty-93.vercel.app/Znorux.webp"
-                            alt="De Noob a Pro | Znorux | Analizando partidas de suscriptores"
-                            width="150px"
-                            height="150px"
-                        />
-                    </div>
-                </div>
-                <hr class="projects_element_separator" />
-                <div class="projects_element_secundary">
-                    <a href="https://noobapro.xyz" rel="external">Website</a>
-                </div>
-            </div>
-            <div class="projects_element">
-                <div class="projects_element_data">
-                    <div class="projects_element_content">
-                        <div class="projects_element_content_title">
-                            <h2>Classroom Uniminuto</h2>
-                        </div>
-                        <div class="projects_element_content_dates">
-                            <h3>
-                                October 2023 - <span class="pause">Slow</span
-                                >
-                            </h3>
-                        </div>
-                        <div class="projects_element_content_descripcion">
-                            <p>
-                                It seeks to update the visual section of the UNIMINUTO virtual education platform "Virtual Classroom", providing a better user experience.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="projects_element_image">
-                        <img
-                            src="https://portfolio-six-sooty-93.vercel.app/ClassroomUniminuto.webp"
-                            alt="Classroom Uniminuto"
-                            width="150px"
-                            height="150px"
-                        />
-                    </div>
-                </div>
-                <hr class="projects_element_separator" />
-                <div class="projects_element_secundary">
-                    <a
-                        href="https://github.com/PintoGamer64/Classroom_Uniminuto"
-                        rel="external">GitHub</a
-                    >
-                </div>
-            </div> -->
         </div>
     </div>
     <style>
         #presentation {
             overflow: hidden;
+            overflow-y: hidden;
             height: 0;
             display: flex;
-            transition: all 0.2s ease;
+            transition: all 0.1s ease;
         }
         #presentation_aside {
             overflow: hidden;
@@ -375,10 +353,12 @@ import Layout from "../../layouts/Layout.astro";
             text-wrap: wrap;
         }
 
+        #jobs_elements,
         #projects_elements {
             box-sizing: border-box;
             padding: 0 10px;
         }
+        .jobs_element,
         .projects_element {
             display: flex;
             height: 200px;
@@ -387,13 +367,16 @@ import Layout from "../../layouts/Layout.astro";
             overflow: hidden;
             flex-direction: column;
         }
+        .jobs_element:nth-child(even),
         .projects_element:nth-child(even) {
             margin: 10px 0;
         }
+        .jobs_element_data,
         .projects_element_data {
             height: 150px;
             display: flex;
         }
+        .jobs_element_secundary,
         .projects_element_secundary {
             width: 100%;
             height: 50px;
@@ -401,6 +384,7 @@ import Layout from "../../layouts/Layout.astro";
             display: flex;
             align-items: center;
         }
+        .jobs_element_secundary a,
         .projects_element_secundary a {
             transition: all 0.2s ease;
             text-decoration: none;
@@ -410,57 +394,81 @@ import Layout from "../../layouts/Layout.astro";
             font-weight: bold;
             font-size: large;
         }
+        .jobs_element_secundary a:hover,
         .projects_element_secundary a:hover {
             background: var(--colorText);
             color: #000000;
         }
+        .jobs_element_separator,
         .projects_element_separator {
             width: 100%;
             margin: 0;
             border: 1px solid #ffffff;
         }
+        .jobs_element_content,
         .projects_element_content {
             box-sizing: border-box;
             padding: 20px;
         }
+        .jobs_element_content_title,
         .projects_element_content_title {
             display: flex;
         }
+        .jobs_element_content_title h2,
         .projects_element_content_title h2 {
             font-size: larger;
             margin: 0;
         }
+        .jobs_element_content_title img,
         .projects_element_content_title img {
         }
         .projects_element_content_dates {
             display: flex;
             align-items: center;
         }
+        .jobs_element_content_dates h3,
         .projects_element_content_dates h3 {
             font-size: medium;
             font-weight: 100;
             font-style: italic;
             margin: 10px 0 0 0;
         }
+        .jobs_element_content_dates span,
         .projects_element_content_dates span {
             padding: 2.5px 10px;
             border-radius: 5px;
         }
+        .jobs_element_content_dates span.complete,
+        .projects_element_content_dates span.complete {
+            background-color: #ff00ff;
+        }
+        .jobs_element_content_dates span.continue,
         .projects_element_content_dates span.continue {
             background-color: #0016ff;
         }
+        .jobs_element_content_dates span.pause,
         .projects_element_content_dates span.pause {
             background-color: #b30000;
         }
+        .jobs_element_content_descripcion,
         .projects_element_content_descripcion {
         }
+        .jobs_element_content_descripcion p,
         .projects_element_content_descripcion p {
             margin: 10px 0 0 0;
             font-size: 13.5px;
             text-wrap: wrap;
         }
+        .jobs_element_image {
+            aspect-ratio: 16/9;
+            height: 150px;
+        }
         .projects_element_image {
             width: 150px;
+            height: 150px;
+        }
+        .jobs_element_image img {
+            aspect-ratio: 16/9;
             height: 150px;
         }
         .projects_element_image img {
@@ -490,6 +498,50 @@ import Layout from "../../layouts/Layout.astro";
             #presentation_aside {
                 display: flex;
                 flex-direction: column;
+            }
+            .jobs_element {
+                display: flex;
+                height: auto;
+                background-color: var(--IconsLinks-Active);
+                border-radius: 8px;
+                overflow: hidden;
+                flex-direction: column;
+            }
+            .jobs_element_data {
+                height: auto;
+                flex-direction: column;
+            }
+            .jobs_element_image {
+                aspect-ratio: 16/9;
+                height: auto;
+                width: 100%;
+            }
+            .jobs_element_image img {
+                aspect-ratio: 16/9;
+                height: auto;
+                width: 100%;
+            }
+            .projects_element_secundary,
+            .jobs_element_secundary {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                padding: 0;
+                align-items: center;
+            }
+            .projects_element_secundary a,
+            .jobs_element_secundary a {
+                width: 100%;
+                height: 100%;
+                transition: all 0.2s ease;
+                text-decoration: none;
+                align-content: center;
+                text-align: center;
+                border: none;
+                padding: 0;
+                border-radius: 0;
+                font-weight: bold;
+                font-size: large;
             }
         }
 
