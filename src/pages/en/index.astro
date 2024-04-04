@@ -7,7 +7,10 @@ import PDFRedirect from "../../components/icons/PDFRedirect.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Joan Cardozo | Web Portfolio" canonical="https://portfolio-six-sooty-93.vercel.app/en">
+<Layout
+    title="Joan Cardozo | Web Portfolio"
+    canonical="https://portfolio-six-sooty-93.vercel.app/en"
+>
     <div id="presentation">
         <div id="presentation_aside">
             <div id="MiniProfileMain">
@@ -70,7 +73,9 @@ import Layout from "../../layouts/Layout.astro";
         <br />
         <h1 id="about_title">About me</h1>
         <p id="about_text">
-            Systems Engineering student with knowledge in design, creation and optimization of pages and web applications, passionate about web development and looking to expand my knowledge :D
+            Systems Engineering student with knowledge in design, creation and
+            optimization of pages and web applications, passionate about web
+            development and looking to expand my knowledge :D
         </p>
         <a
             href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
@@ -91,7 +96,8 @@ import Layout from "../../layouts/Layout.astro";
                     NETLOGISTIK | October 2022 - April 2023
                 </h3>
                 <p class="experience_job_text">
-                    Participate in the development of tools that accelerate command packaging for the BlueYonder platform
+                    Participate in the development of tools that accelerate
+                    command packaging for the BlueYonder platform
                 </p>
             </li>
         </ul>
@@ -117,7 +123,6 @@ import Layout from "../../layouts/Layout.astro";
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>PngtubeStudio</h2>
-                            <!-- <img src="" alt="PngtubeStudio Technologies" /> -->
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
@@ -128,7 +133,10 @@ import Layout from "../../layouts/Layout.astro";
                         </div>
                         <div class="projects_element_content_descripcion">
                             <p>
-                                This project seeks to be an alternative to Pngtubers, integrating tools more dedicated to said format, seeking to be a community-based program.
+                                This project seeks to be an alternative to
+                                Pngtubers, integrating tools more dedicated to
+                                said format, seeking to be a community-based
+                                program.
                             </p>
                         </div>
                     </div>
@@ -149,12 +157,11 @@ import Layout from "../../layouts/Layout.astro";
                     >
                 </div>
             </div>
-            <div class="projects_element">
+            <!-- <div class="projects_element">
                 <div class="projects_element_data">
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>Noob A Pro</h2>
-                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
@@ -188,7 +195,6 @@ import Layout from "../../layouts/Layout.astro";
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>Classroom Uniminuto</h2>
-                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
@@ -218,12 +224,15 @@ import Layout from "../../layouts/Layout.astro";
                         rel="external">GitHub</a
                     >
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <style>
         #presentation {
-            display: none;
+            overflow: hidden;
+            height: 0;
+            display: flex;
+            transition: all 0.2s ease;
         }
         #presentation_aside {
             overflow: hidden;
@@ -461,12 +470,23 @@ import Layout from "../../layouts/Layout.astro";
 
         @media screen and (max-width: 1200px) {
             #presentation {
-                display: flex;
+                height: 325px;
                 justify-content: center;
+            }
+
+            #presentation::-webkit-scrollbar {
+                overflow: hidden;
+                width: 0px;
+                box-sizing: border-box;
             }
         }
 
         @media screen and (max-width: 750px) {
+            #presentation {
+                height: 480px;
+                justify-content: center;
+            }
+
             #presentation_aside {
                 display: flex;
                 flex-direction: column;

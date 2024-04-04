@@ -159,12 +159,11 @@ import Layout from "../layouts/Layout.astro";
                     >
                 </div>
             </div>
-            <div class="projects_element">
+            <!--             <div class="projects_element">
                 <div class="projects_element_data">
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>Noob A Pro</h2>
-                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
@@ -201,7 +200,6 @@ import Layout from "../layouts/Layout.astro";
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>Classroom Uniminuto</h2>
-                            <!-- <img src="" alt="Classroom Uniminuto Technologies" /> -->
                         </div>
                         <div class="projects_element_content_dates">
                             <h3>
@@ -233,12 +231,15 @@ import Layout from "../layouts/Layout.astro";
                         rel="external">GitHub</a
                     >
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <style>
         #presentation {
-            display: none;
+            overflow: hidden;
+            height: 0;
+            display: flex;
+            transition: all 0.2s ease;
         }
         #presentation_aside {
             overflow: hidden;
@@ -476,12 +477,23 @@ import Layout from "../layouts/Layout.astro";
 
         @media screen and (max-width: 1200px) {
             #presentation {
-                display: flex;
+                height: 325px;
                 justify-content: center;
+            }
+
+            #presentation::-webkit-scrollbar {
+                overflow: hidden;
+                width: 0px;
+                box-sizing: border-box;
             }
         }
 
         @media screen and (max-width: 750px) {
+            #presentation {
+                height: 480px;
+                justify-content: center;
+            }
+
             #presentation_aside {
                 display: flex;
                 flex-direction: column;
