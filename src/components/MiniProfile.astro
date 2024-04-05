@@ -92,16 +92,12 @@ import Mail from "./icons/Mail.astro";
     #aside::before {
         transition: all 0.2s ease;
         content: "PINTOGAMER";
-        color: var(--colorText);
+        color: var(--spice-border-active);
         position: absolute;
         top: 4px;
         left: 13px;
         margin: 0;
         padding: 0 10px;
-    }
-
-    #aside:hover::before {
-        color: var(--spice-border-active);
     }
 
     aside,
@@ -140,9 +136,8 @@ import Mail from "./icons/Mail.astro";
     #MiniProfileComplement-SpotifyActivity {
         transition: all 0.2s ease;
         width: 280px;
-        border-radius: 8px;
+        border-bottom: 3px solid var(--spice-border-active);
         padding: 10px;
-        background-color: var(--IconsLinks-Active);
     }
 
     #MiniProfileComplement-Links {
