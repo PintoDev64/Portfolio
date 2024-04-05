@@ -116,7 +116,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
     <div id="jobs">
         <br />
-        <h1 id="jobs_title">Comisiones</h1>
+        <h1 id="jobs_title">Commissions</h1>
         <div id="jobs_elements">
             <div class="jobs_element">
                 <div class="jobs_element_data">
@@ -303,8 +303,7 @@ import Layout from "../../layouts/Layout.astro";
             width: 200px;
             height: 45px;
             text-decoration: none;
-            border-radius: 30px;
-            border: 3px solid var(--spice-border-active-t);
+            border-left: 3px solid var(--spice-border-active);
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
@@ -390,8 +389,7 @@ import Layout from "../../layouts/Layout.astro";
             transition: all 0.2s ease;
             text-decoration: none;
             padding: 5px 15px;
-            border-radius: 20px;
-            border: 1px solid var(--spice-header);
+            border-left: 3px solid var(--colorText);
             font-weight: bold;
             font-size: large;
         }
@@ -491,6 +489,29 @@ import Layout from "../../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 750px) {
+            #experience_title,
+            #studies_title,
+            #jobs_title,
+            #projects_title {
+                text-align: center;
+            }
+
+            #about {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #about_cv {
+                border: none;
+                width: 70%;
+                border-top: 3px solid var(--spice-border-active);
+            }
+
+            #about_text {
+                text-align: center;
+            }
+
             #presentation {
                 height: 480px;
                 justify-content: center;

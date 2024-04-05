@@ -305,7 +305,7 @@ import Layout from "../layouts/Layout.astro";
             width: 200px;
             height: 45px;
             text-decoration: none;
-            border-bottom: 3px solid var(--spice-border-active);
+            border-left: 3px solid var(--spice-border-active);
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
@@ -491,6 +491,30 @@ import Layout from "../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 750px) {
+
+            #experience_title,
+            #studies_title,
+            #jobs_title,
+            #projects_title {
+                text-align: center;
+            }
+
+            #about {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #about_cv {
+                border: none;
+                width: 70%;
+                border-top: 3px solid var(--spice-border-active);
+            }
+
+            #about_text {
+                text-align: center;
+            }
+
             #presentation {
                 height: 480px;
                 justify-content: center;
