@@ -154,10 +154,20 @@ import Layout from "../layouts/Layout.astro";
                 </div>
                 <hr class="jobs_element_separator" />
                 <div class="jobs_element_secundary">
-                    <a
-                        href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
-                        rel="external">Ejemplo de Uso</a
-                    >
+                    <div class="jobs_element_secondary_links">
+                        <a
+                            href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
+                            rel="external">Ejemplo de Uso</a
+                        >
+                    </div>
+                    <div class="jobs_element_secondary_techs">
+                        <img
+                            src="https://portfolio-six-sooty-93.vercel.app/CorelVectorLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Corel Vector"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -381,7 +391,7 @@ import Layout from "../layouts/Layout.astro";
         }
         .jobs_element_secundary,
         .projects_element_secundary {
-            width: 100%;
+            width: calc(100% - 40px);
             height: 50px;
             padding: 0 20px;
             display: flex;
@@ -401,6 +411,26 @@ import Layout from "../layouts/Layout.astro";
             background: var(--colorText);
             color: #000000;
         }
+
+        .jobs_element_secondary_links,
+        .jobs_element_secondary_techs {
+            display: flex;
+            width: 50%;
+        }
+
+        .jobs_element_secondary_links {
+            justify-content: flex-start;
+        }
+
+        .jobs_element_secondary_techs {
+            justify-content: flex-end;
+        }
+
+        .jobs_element_secondary_techs img {
+            width: 30px;
+            height: 30px;
+        }
+
         .jobs_element_separator,
         .projects_element_separator {
             width: 100%;
@@ -492,7 +522,6 @@ import Layout from "../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 750px) {
-
             #experience_title,
             #studies_title,
             #jobs_title,
