@@ -162,11 +162,14 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                     <div class="jobs_element_secondary_techs">
                         <img
+                            class="jobs_element_secondary_techs_icons"
                             src="https://portfolio-six-sooty-93.vercel.app/CorelVectorLogo.webp"
                             width="30px"
                             height="30px"
                             alt="Corel Vector"
+                            id="corelvector"
                         />
+                        <p id="jobs_element_secondary_techs_name"></p>
                     </div>
                 </div>
             </div>
@@ -210,14 +213,93 @@ import Layout from "../layouts/Layout.astro";
                 </div>
                 <hr class="projects_element_separator" />
                 <div class="projects_element_secundary">
-                    <a
-                        href="https://github.com/PintoGamer64/PngtubeStudio"
-                        rel="external">GitHub</a
-                    >
+                    <div class="projects_element_secondary_links">
+                        <a
+                            href="https://github.com/PintoGamer64/PngtubeStudio"
+                            rel="external">GitHub</a
+                        >
+                    </div>
+                    <div class="projects_element_secondary_techs">
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/NodeLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="NodeJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/Vite.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Vite"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/ReactLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ReactJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/ElectronLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ElectronJs"
+                            id="corelvector"
+                        />
+                        <p id="projects_element_secondary_techs_name"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script is:inline>
+        const jobs_element_secondary_techs_icons =
+            document.getElementsByClassName(
+                "jobs_element_secondary_techs_icons",
+            );
+        const projects_element_secondary_techs_icons =
+            document.getElementsByClassName(
+                "projects_element_secondary_techs_icons",
+            );
+        const jobs_element_secondary_techs_name = document.getElementById(
+            "jobs_element_secondary_techs_name",
+        );
+        const projects_element_secondary_techs_name = document.getElementById(
+            "projects_element_secondary_techs_name",
+        );
+        for (let i = 0; i < jobs_element_secondary_techs_icons.length; i++) {
+            const element = jobs_element_secondary_techs_icons[i];
+            element.addEventListener("mouseenter", (event) => {
+                jobs_element_secondary_techs_name.style.display = "grid";
+                jobs_element_secondary_techs_name.innerText = event.target.alt;
+            });
+            element.addEventListener("mouseleave", () => {
+                jobs_element_secondary_techs_name.style.display = "none";
+                jobs_element_secondary_techs_name.innerText = "";
+            });
+        }
+        for (
+            let i = 0;
+            i < projects_element_secondary_techs_icons.length;
+            i++
+        ) {
+            const element = jobs_element_secondary_techs_icons[i];
+            element.addEventListener("mouseenter", (event) => {
+                projects_element_secondary_techs_name.style.display = "grid";
+                projects_element_secondary_techs_name.innerText = event.target.alt;
+            });
+            element.addEventListener("mouseleave", () => {
+                projects_element_secondary_techs_name.style.display = "none";
+                projects_element_secondary_techs_name.innerText = "";
+            });
+        }
+    </script>
     <style>
         #presentation {
             overflow: hidden;
@@ -412,23 +494,42 @@ import Layout from "../layouts/Layout.astro";
             color: #000000;
         }
 
+        .projects_element_secondary_links,
         .jobs_element_secondary_links,
+        .projects_element_secondary_techs,
         .jobs_element_secondary_techs {
             display: flex;
             width: 50%;
         }
 
+        .projects_element_secondary_links,
         .jobs_element_secondary_links {
             justify-content: flex-start;
         }
 
+        .projects_element_secondary_techs,
         .jobs_element_secondary_techs {
+            position: relative;
             justify-content: flex-end;
         }
 
+        .projects_element_secondary_techs img,
         .jobs_element_secondary_techs img {
             width: 30px;
             height: 30px;
+        }
+
+        #jobs_element_secondary_techs_name {
+            max-width: 225px;
+            min-width: 225px;
+            place-content: center;
+            background: var(--backgroundColorMain);
+            height: 40px;
+            font-size: large;
+            /* font-weight: bold; */
+            position: absolute;
+            margin: 0;
+            top: -60px;
         }
 
         .jobs_element_separator,
