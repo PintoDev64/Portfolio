@@ -157,7 +157,7 @@ import Layout from "../layouts/Layout.astro";
                     <div class="jobs_element_secondary_links">
                         <a
                             href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
-                            rel="external">Ejemplo de Uso</a
+                            rel="external">Demostracion</a
                         >
                     </div>
                     <div class="jobs_element_secondary_techs">
@@ -230,7 +230,7 @@ import Layout from "../layouts/Layout.astro";
                         />
                         <img
                             class="projects_element_secondary_techs_icons"
-                            src="https://portfolio-six-sooty-93.vercel.app/Vite.webp"
+                            src="https://portfolio-six-sooty-93.vercel.app/ViteLogo.webp"
                             width="30px"
                             height="30px"
                             alt="Vite"
@@ -289,10 +289,11 @@ import Layout from "../layouts/Layout.astro";
             i < projects_element_secondary_techs_icons.length;
             i++
         ) {
-            const element = jobs_element_secondary_techs_icons[i];
+            const element = projects_element_secondary_techs_icons[i];
             element.addEventListener("mouseenter", (event) => {
                 projects_element_secondary_techs_name.style.display = "grid";
-                projects_element_secondary_techs_name.innerText = event.target.alt;
+                projects_element_secondary_techs_name.innerText =
+                    event.target.alt;
             });
             element.addEventListener("mouseleave", () => {
                 projects_element_secondary_techs_name.style.display = "none";
@@ -329,7 +330,7 @@ import Layout from "../layouts/Layout.astro";
 
         #MiniProfileMainPicture {
             transition: all 0.2s ease;
-            width: 300px;
+            width: 250px;
             border-radius: 8px;
         }
 
@@ -515,18 +516,20 @@ import Layout from "../layouts/Layout.astro";
 
         .projects_element_secondary_techs img,
         .jobs_element_secondary_techs img {
+            margin: 0 0 0 15px;
             width: 30px;
             height: 30px;
         }
 
+        #projects_element_secondary_techs_name,
         #jobs_element_secondary_techs_name {
+            display: none;
             max-width: 225px;
             min-width: 225px;
             place-content: center;
             background: var(--backgroundColorMain);
             height: 40px;
             font-size: large;
-            /* font-weight: bold; */
             position: absolute;
             margin: 0;
             top: -60px;
@@ -623,6 +626,10 @@ import Layout from "../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 750px) {
+            .projects_element_separator,
+            .jobs_element_separator {
+                display: none;
+            }
             #experience_title,
             #studies_title,
             #jobs_title,
@@ -655,6 +662,7 @@ import Layout from "../layouts/Layout.astro";
                 display: flex;
                 flex-direction: column;
             }
+            .projects_element,
             .jobs_element {
                 display: flex;
                 height: auto;
@@ -667,24 +675,41 @@ import Layout from "../layouts/Layout.astro";
                 height: auto;
                 flex-direction: column;
             }
-            .jobs_element_image {
-                aspect-ratio: 16/9;
-                height: auto;
-                width: 100%;
-            }
+            .jobs_element_image,
             .jobs_element_image img {
                 aspect-ratio: 16/9;
                 height: auto;
                 width: 100%;
             }
+            .jobs_element_secondary_techs,
+            .projects_element_secondary_techs {
+                position: relative;
+            }
             .projects_element_secundary,
             .jobs_element_secundary {
                 width: 100%;
-                height: 50px;
+                height: 100px;
                 display: flex;
+                flex-direction: column-reverse;
                 padding: 0;
                 align-items: center;
             }
+
+            .projects_element_secondary_links,
+            .projects_element_secondary_techs,
+            .jobs_element_secondary_links,
+            .jobs_element_secondary_techs {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+            }
+
+            .projects_element_secondary_links,
+            .jobs_element_secondary_links {
+                border-top: 2px solid var(--colorText);
+            }
+
             .projects_element_secundary a,
             .jobs_element_secundary a {
                 width: 100%;
@@ -702,6 +727,15 @@ import Layout from "../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 575px) {
+            .projects_element_data {
+                height: auto;
+                align-items: center;
+                flex-direction: column;
+            }
+            .projects_element_image,
+            .projects_element_image img {
+                display: none;
+            }
             .projects_element {
                 height: auto;
             }

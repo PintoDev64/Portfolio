@@ -153,10 +153,23 @@ import Layout from "../../layouts/Layout.astro";
                 </div>
                 <hr class="jobs_element_separator" />
                 <div class="jobs_element_secundary">
-                    <a
-                        href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
-                        rel="external">Ejemplo de Uso</a
-                    >
+                    <div class="jobs_element_secondary_links">
+                        <a
+                            href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
+                            rel="external">Demo</a
+                        >
+                    </div>
+                    <div class="jobs_element_secondary_techs">
+                        <img
+                            class="jobs_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/CorelVectorLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Corel Vector"
+                            id="corelvector"
+                        />
+                        <p id="jobs_element_secondary_techs_name"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,14 +211,94 @@ import Layout from "../../layouts/Layout.astro";
                 </div>
                 <hr class="projects_element_separator" />
                 <div class="projects_element_secundary">
-                    <a
-                        href="https://github.com/PintoGamer64/PngtubeStudio"
-                        rel="external">GitHub</a
-                    >
+                    <div class="projects_element_secondary_links">
+                        <a
+                            href="https://github.com/PintoGamer64/PngtubeStudio"
+                            rel="external">GitHub</a
+                        >
+                    </div>
+                    <div class="projects_element_secondary_techs">
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/NodeLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="NodeJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/ViteLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Vite"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/ReactLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ReactJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="https://portfolio-six-sooty-93.vercel.app/ElectronLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ElectronJs"
+                            id="corelvector"
+                        />
+                        <p id="projects_element_secondary_techs_name"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script is:inline>
+        const jobs_element_secondary_techs_icons =
+            document.getElementsByClassName(
+                "jobs_element_secondary_techs_icons",
+            );
+        const projects_element_secondary_techs_icons =
+            document.getElementsByClassName(
+                "projects_element_secondary_techs_icons",
+            );
+        const jobs_element_secondary_techs_name = document.getElementById(
+            "jobs_element_secondary_techs_name",
+        );
+        const projects_element_secondary_techs_name = document.getElementById(
+            "projects_element_secondary_techs_name",
+        );
+        for (let i = 0; i < jobs_element_secondary_techs_icons.length; i++) {
+            const element = jobs_element_secondary_techs_icons[i];
+            element.addEventListener("mouseenter", (event) => {
+                jobs_element_secondary_techs_name.style.display = "grid";
+                jobs_element_secondary_techs_name.innerText = event.target.alt;
+            });
+            element.addEventListener("mouseleave", () => {
+                jobs_element_secondary_techs_name.style.display = "none";
+                jobs_element_secondary_techs_name.innerText = "";
+            });
+        }
+        for (
+            let i = 0;
+            i < projects_element_secondary_techs_icons.length;
+            i++
+        ) {
+            const element = projects_element_secondary_techs_icons[i];
+            element.addEventListener("mouseenter", (event) => {
+                projects_element_secondary_techs_name.style.display = "grid";
+                projects_element_secondary_techs_name.innerText =
+                    event.target.alt;
+            });
+            element.addEventListener("mouseleave", () => {
+                projects_element_secondary_techs_name.style.display = "none";
+                projects_element_secondary_techs_name.innerText = "";
+            });
+        }
+    </script>
     <style>
         #presentation {
             overflow: hidden;
@@ -235,7 +328,7 @@ import Layout from "../../layouts/Layout.astro";
 
         #MiniProfileMainPicture {
             transition: all 0.2s ease;
-            width: 300px;
+            width: 250px;
             border-radius: 8px;
         }
 
@@ -379,7 +472,7 @@ import Layout from "../../layouts/Layout.astro";
         }
         .jobs_element_secundary,
         .projects_element_secundary {
-            width: 100%;
+            width: calc(100% - 40px);
             height: 50px;
             padding: 0 20px;
             display: flex;
@@ -399,6 +492,47 @@ import Layout from "../../layouts/Layout.astro";
             background: var(--colorText);
             color: #000000;
         }
+
+        .projects_element_secondary_links,
+        .jobs_element_secondary_links,
+        .projects_element_secondary_techs,
+        .jobs_element_secondary_techs {
+            display: flex;
+            width: 50%;
+        }
+
+        .projects_element_secondary_links,
+        .jobs_element_secondary_links {
+            justify-content: flex-start;
+        }
+
+        .projects_element_secondary_techs,
+        .jobs_element_secondary_techs {
+            position: relative;
+            justify-content: flex-end;
+        }
+
+        .projects_element_secondary_techs img,
+        .jobs_element_secondary_techs img {
+            margin: 0 0 0 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        #projects_element_secondary_techs_name,
+        #jobs_element_secondary_techs_name {
+            display: none;
+            max-width: 225px;
+            min-width: 225px;
+            place-content: center;
+            background: var(--backgroundColorMain);
+            height: 40px;
+            font-size: large;
+            position: absolute;
+            margin: 0;
+            top: -60px;
+        }
+
         .jobs_element_separator,
         .projects_element_separator {
             width: 100%;
@@ -490,6 +624,10 @@ import Layout from "../../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 750px) {
+            .projects_element_separator,
+            .jobs_element_separator {
+                display: none;
+            }
             #experience_title,
             #studies_title,
             #jobs_title,
@@ -522,6 +660,7 @@ import Layout from "../../layouts/Layout.astro";
                 display: flex;
                 flex-direction: column;
             }
+            .projects_element,
             .jobs_element {
                 display: flex;
                 height: auto;
@@ -534,24 +673,41 @@ import Layout from "../../layouts/Layout.astro";
                 height: auto;
                 flex-direction: column;
             }
-            .jobs_element_image {
-                aspect-ratio: 16/9;
-                height: auto;
-                width: 100%;
-            }
+            .jobs_element_image,
             .jobs_element_image img {
                 aspect-ratio: 16/9;
                 height: auto;
                 width: 100%;
             }
+            .jobs_element_secondary_techs,
+            .projects_element_secondary_techs {
+                position: relative;
+            }
             .projects_element_secundary,
             .jobs_element_secundary {
                 width: 100%;
-                height: 50px;
+                height: 100px;
                 display: flex;
+                flex-direction: column-reverse;
                 padding: 0;
                 align-items: center;
             }
+
+            .projects_element_secondary_links,
+            .projects_element_secondary_techs,
+            .jobs_element_secondary_links,
+            .jobs_element_secondary_techs {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+            }
+
+            .projects_element_secondary_links,
+            .jobs_element_secondary_links {
+                border-top: 2px solid var(--colorText);
+            }
+
             .projects_element_secundary a,
             .jobs_element_secundary a {
                 width: 100%;
@@ -569,6 +725,15 @@ import Layout from "../../layouts/Layout.astro";
         }
 
         @media screen and (max-width: 575px) {
+            .projects_element_data {
+                height: auto;
+                align-items: center;
+                flex-direction: column;
+            }
+            .projects_element_image,
+            .projects_element_image img {
+                display: none;
+            }
             .projects_element {
                 height: auto;
             }
