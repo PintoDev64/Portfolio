@@ -78,14 +78,24 @@ import Layout from "../layouts/Layout.astro";
             creacion y optimizacion de paginas y aplicaciones web, apasionado
             por el desarrollo web y buscando ampliar mis conocimientos :D
         </p>
-        <a
-            href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
-            rel="archives"
-            id="about_cv"
-        >
-            <p>Curriculum</p>
-            <PDFRedirect />
-        </a>
+        <div id="about_links">
+            <a
+                href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
+                rel="archives"
+                id="about_cv"
+            >
+                <p>Curriculum</p>
+                <PDFRedirect />
+            </a>
+            <a
+                href="https://portfolio-six-sooty-93.vercel.app/Comisiones%20-%20PintoGamer64"
+                rel="archives"
+                id="about_comissions"
+            >
+                <p>Comisiones</p>
+                <PDFRedirect />
+            </a>
+        </div>
     </div>
     <div id="experience">
         <br />
@@ -392,6 +402,13 @@ import Layout from "../layouts/Layout.astro";
         .MiniProfileComplement-LinksItems:hover {
             background-color: var(--IconsLinks-Active);
         }
+
+        #about_links {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #about_comissions,
         #about_cv {
             transition: all 0.2s ease;
             display: flex;
@@ -636,10 +653,18 @@ import Layout from "../layouts/Layout.astro";
                 align-items: center;
             }
 
+            #about_links {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            #about_comissions,
             #about_cv {
                 border: none;
-                width: 70%;
+                width: 100%;
                 border-top: 3px solid var(--spice-border-active);
+                padding: 0 20px;
+                margin: 0 10px;
             }
 
             #about_text {

@@ -78,14 +78,24 @@ import Layout from "../../layouts/Layout.astro";
             optimization of pages and web applications, passionate about web
             development and looking to expand my knowledge :D
         </p>
-        <a
-            href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
-            rel="archives"
-            id="about_cv"
-        >
-            <p>Currículum</p>
-            <PDFRedirect />
-        </a>
+        <div id="about_links">
+            <a
+                href="https://portfolio-six-sooty-93.vercel.app/Joan%20Cardozo%20CV.pdf"
+                rel="archives"
+                id="about_cv"
+            >
+                <p>Curriculum</p>
+                <PDFRedirect />
+            </a>
+            <a
+                href="https://portfolio-six-sooty-93.vercel.app/Comisiones%20-%20PintoGamer64"
+                rel="archives"
+                id="about_comissions"
+            >
+                <p>Commissions</p>
+                <PDFRedirect />
+            </a>
+        </div>
     </div>
     <div id="experience">
         <br />
@@ -390,6 +400,13 @@ import Layout from "../../layouts/Layout.astro";
         .MiniProfileComplement-LinksItems:hover {
             background-color: var(--IconsLinks-Active);
         }
+
+        #about_links {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #about_comissions,
         #about_cv {
             transition: all 0.2s ease;
             display: flex;
@@ -397,7 +414,7 @@ import Layout from "../../layouts/Layout.astro";
             width: 200px;
             height: 45px;
             text-decoration: none;
-            border-left: 3px solid var(--spice-border-active);
+            background-color: var(--spice-border-active);
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
@@ -405,9 +422,6 @@ import Layout from "../../layouts/Layout.astro";
         }
         #about_cv p {
             margin: 0 10px 0 0;
-        }
-        #about_cv:hover {
-            background-color: var(--spice-border-active);
         }
         #studies_jobs,
         #experience_jobs {
@@ -483,14 +497,10 @@ import Layout from "../../layouts/Layout.astro";
             transition: all 0.2s ease;
             text-decoration: none;
             padding: 5px 15px;
-            border-left: 3px solid var(--colorText);
-            font-weight: bold;
-            font-size: large;
-        }
-        .jobs_element_secundary a:hover,
-        .projects_element_secundary a:hover {
             background: var(--colorText);
             color: #000000;
+            font-weight: bold;
+            font-size: large;
         }
 
         .projects_element_secondary_links,
@@ -641,14 +651,22 @@ import Layout from "../../layouts/Layout.astro";
                 align-items: center;
             }
 
+            #about_links {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            #about_comissions,
             #about_cv {
                 border: none;
-                width: 70%;
+                width: 100%;
                 border-top: 3px solid var(--spice-border-active);
+                padding: 0 20px;
+                margin: 0 10px;
             }
 
             #about_text {
-                text-align: center;
+                text-wrap: pretty;
             }
 
             #presentation {
