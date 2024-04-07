@@ -399,7 +399,7 @@ import Layout from "../layouts/Layout.astro";
             width: 200px;
             height: 45px;
             text-decoration: none;
-            border-left: 3px solid var(--spice-border-active);
+            background-color: var(--spice-border-active);
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
@@ -407,9 +407,6 @@ import Layout from "../layouts/Layout.astro";
         }
         #about_cv p {
             margin: 0 10px 0 0;
-        }
-        #about_cv:hover {
-            background-color: var(--spice-border-active);
         }
         #studies_jobs,
         #experience_jobs {
@@ -485,14 +482,10 @@ import Layout from "../layouts/Layout.astro";
             transition: all 0.2s ease;
             text-decoration: none;
             padding: 5px 15px;
-            border-left: 3px solid var(--colorText);
-            font-weight: bold;
-            font-size: large;
-        }
-        .jobs_element_secundary a:hover,
-        .projects_element_secundary a:hover {
             background: var(--colorText);
             color: #000000;
+            font-weight: bold;
+            font-size: large;
         }
 
         .projects_element_secondary_links,
@@ -650,7 +643,7 @@ import Layout from "../layouts/Layout.astro";
             }
 
             #about_text {
-                text-align: center;
+                text-wrap: pretty;
             }
 
             #presentation {
