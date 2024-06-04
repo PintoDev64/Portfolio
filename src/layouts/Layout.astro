@@ -4,10 +4,9 @@ import MiniProfile from "../components/MiniProfile.astro";
 
 interface Props {
     title: string;
-    canonical: string;
 }
 
-const { title, canonical } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,27 +15,17 @@ const { title, canonical } = Astro.props;
         <meta charset="utf-8" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
-        <link
-            rel="apple-touch-icon"
-            href="https://joancardozo.website/logo512.png"
-        />
-        <link rel="canonical" href={canonical} />
+        <link rel="apple-touch-icon" href="/logo512.png" />
         <meta name="description" content="Amante de la tecnologia web" />
         <meta name="viewport" content="width=device-width" />
         <meta
             property="og:title"
             content="Joan Cardozo | FullStack Web Developer"
         />
-        <meta
-            property="og:image"
-            content="https://joancardozo.website/joancardozo.png"
-        />
+        <meta property="og:image" content="/joancardozo.png" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="720" />
-        <meta
-            property="og:url"
-            content="https://joancardozo.website/"
-        />
+        <meta property="og:url" content="https://joancardozo.website/" />
         <meta
             property="og:site_name"
             content="Joan Cardozo | FullStack Web Developer"
@@ -72,6 +61,16 @@ const { title, canonical } = Astro.props;
                 <Navbar />
                 <div id="ContentScroll">
                     <slot />
+                    <div id="ContentScrollFooter">
+                        <p>
+                            Referencia: <a
+                                class="urls"
+                                href="https://porfolio.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer">portfolio.dev</a
+                            >, Hecho con cariño ❤
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -103,7 +102,13 @@ const { title, canonical } = Astro.props;
 
     * {
         font-family: CascadiaMono;
+        word-spacing: -2px;
         color: var(--colorText);
+    }
+
+    a.urls {
+        color: #ff0000;
+        font-style: italic;
     }
 
     body {
@@ -125,6 +130,48 @@ const { title, canonical } = Astro.props;
         width: 1200px;
         margin: 25px 0;
         display: flex;
+    }
+
+    #AvailableWork {
+        align-items: center;
+        display: flex;
+        margin: 0 0 0 20px;
+    }
+
+    #AvailableWork_Text_Conic {
+        background-image: conic-gradient(
+            from 90deg at 50% 50%,
+            #51e4b8,
+            #21554e,
+            #51e4b8
+        );
+        animation: spin 2s linear infinite;
+        inset: -1000%;
+        position: absolute;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #AvailableWork_Text_Content {
+        background-color: var(--backgroundColorMain);
+        color: #fffc;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        border-radius: 99999px;
+        padding: 5px 10px;
+        z-index: 1;
+    }
+
+    #AvailableWork_Text {
+        padding: 1px;
+        border-radius: 9999px;
+        overflow: hidden;
+        display: inline-flex;
+        position: relative;
     }
 
     #Content {
@@ -154,7 +201,7 @@ const { title, canonical } = Astro.props;
         overflow: hidden;
         box-sizing: border-box;
         overflow-y: auto;
-        padding: 0 20px 30px;
+        padding: 0 20px 0;
         scroll-behavior: smooth;
     }
 
@@ -170,6 +217,21 @@ const { title, canonical } = Astro.props;
 
     #ContentScroll::-webkit-scrollbar-thumb {
         background-color: #ffffff;
+    }
+
+    #ContentScrollFooter {
+        transform: translateX(-20px);
+        margin: 30px 0 0 0;
+        width: calc(100% + 40px);
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border: none;
+        border-top: #ffffff var(--border-style) var(--border-width);
+    }
+
+    #ContentScrollFooter p {
+        margin: 0;
     }
 
     @media screen and (max-width: 1200px) {
@@ -189,13 +251,21 @@ const { title, canonical } = Astro.props;
         }
 
         #ContentScroll {
-            padding: 0 10px 30px;
+            padding: 0 10px 0;
         }
 
         #ContentScroll::-webkit-scrollbar {
             overflow: hidden;
             width: 0px;
             box-sizing: border-box;
+        }
+
+        #ContentScrollFooter {
+            transform: translateX(-10px);
+            margin: 30px 0 0 0;
+            width: calc(100% + 20px);
+            border: none;
+            border-top: #ffffff var(--border-style) var(--border-width);
         }
     }
 

@@ -7,10 +7,7 @@ import PDFRedirect from "../components/icons/PDFRedirect.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-    title="Joan Cardozo | Portafolio Web"
-    canonical="https://joancardozo.website/"
->
+<Layout title="Joan Cardozo | Portafolio Web">
     <div id="presentation">
         <div id="presentation_aside">
             <div id="MiniProfileMain">
@@ -26,16 +23,6 @@ import Layout from "../layouts/Layout.astro";
                 <h2 id="MiniProfileMainName">JOAN SEBASTIAN CARDOZO SALINAS</h2>
                 <p id="MiniProfileMainDescription">FullStack Web Developer</p>
                 <ul id="MiniProfileComplement-Links">
-                    <li class="MiniProfileComplement-LinksItems">
-                        <a
-                            href="https://www.facebook.com/joansebastian.cardozosalinas.92"
-                            rel="external"
-                            id="AsideFacebookLink"
-                            aria-label="Mas sobre mi en Facebook"
-                        >
-                            <Facebook />
-                        </a>
-                    </li>
                     <li class="MiniProfileComplement-LinksItems">
                         <a
                             href="https://github.com/PintoGamer64"
@@ -72,18 +59,24 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <div id="about">
         <br />
-        <h1 id="about_title">Sobre Mi</h1>
+        <div id="about_title">
+            <h1>Sobre Mi</h1>
+            <div id="AvailableWork">
+                <span id="AvailableWork_Text">
+                    <div id="AvailableWork_Text_Content">
+                        Disponible para trabajar
+                    </div>
+                    <span id="AvailableWork_Text_Conic"></span>
+                </span>
+            </div>
+        </div>
         <p id="about_text">
             Estudiante de Ingenieria de Sistemas con conocimentos en diseño,
             creacion y optimizacion de paginas y aplicaciones web, apasionado
             por el desarrollo web y buscando ampliar mis conocimientos :D
         </p>
         <div id="about_links">
-            <a
-                href="/Joan%20Cardozo%20CV.pdf"
-                rel="archives"
-                id="about_cv"
-            >
+            <a href="/Joan%20Cardozo%20CV.pdf" rel="archives" id="about_cv">
                 <p>Curriculum</p>
                 <PDFRedirect />
             </a>
@@ -144,6 +137,7 @@ import Layout from "../layouts/Layout.astro";
                         <div class="jobs_element_content_descripcion">
                             <p>
                                 Solicitado por <a
+                                    class="urls"
                                     href="https://www.youtube.com/@Tenma21"
                                     target="_blank"
                                     rel="noopener noreferrer">Final Tenma</a
@@ -155,7 +149,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                     <div class="jobs_element_image">
                         <img
-                            src="https://portfolio-six-./DesingBlueArchiveReviews.webp"
+                            src="/DesingBlueArchiveReviews.webp"
                             alt="Desing Blue Archive Reviews"
                             width="266.656px"
                             height="150px"
@@ -173,7 +167,7 @@ import Layout from "../layouts/Layout.astro";
                     <div class="jobs_element_secondary_techs">
                         <img
                             class="jobs_element_secondary_techs_icons"
-                            src="https://portfolio-six-./CorelVectorLogo.webp"
+                            src="/CorelVectorLogo.webp"
                             width="30px"
                             height="30px"
                             alt="Corel Vector"
@@ -229,7 +223,8 @@ import Layout from "../layouts/Layout.astro";
                         >
                         <a
                             href="https://objects.githubusercontent.com/github-production-release-asset-2e65be/782785618/219b65e5-876b-4084-bcd0-e6f799db353c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T233309Z&X-Amz-Expires=300&X-Amz-Signature=6fed6da3b8596802fe183f9f59644c8c6bfca9c9c232818f5cec1db8dacc79ab&X-Amz-SignedHeaders=host&actor_id=84690368&key_id=0&repo_id=782785618&response-content-disposition=attachment%3B%20filename%3DPngtubeStudio-Setup-1.1.0.exe&response-content-type=application%2Foctet-stream"
-                            rel="external" target="_blank">Descargar</a
+                            rel="external"
+                            target="_blank">Descargar</a
                         >
                     </div>
                     <div class="projects_element_secondary_techs">
@@ -404,6 +399,10 @@ import Layout from "../layouts/Layout.astro";
 
         .MiniProfileComplement-LinksItems:hover {
             background-color: var(--IconsLinks-Active);
+        }
+
+        #about_title {
+            display: flex;
         }
 
         #about_links {
@@ -667,9 +666,7 @@ import Layout from "../layouts/Layout.astro";
 
             #about_comissions,
             #about_cv {
-                border: none;
                 width: 100%;
-                border-top: 3px solid var(--spice-border-active);
                 padding: 0 20px;
                 margin: 0 10px;
             }
@@ -710,6 +707,11 @@ import Layout from "../layouts/Layout.astro";
             .projects_element_secondary_techs {
                 position: relative;
             }
+
+            .jobs_element_secondary_techs img,
+            .projects_element_secondary_techs img {
+                margin: 0 10px;
+            }
             .projects_element_secundary,
             .jobs_element_secundary {
                 width: 100%;
@@ -748,6 +750,8 @@ import Layout from "../layouts/Layout.astro";
                 border-radius: 0;
                 font-weight: bold;
                 font-size: large;
+                outline: 2px #000000 solid;
+                margin: 0;
             }
         }
 
