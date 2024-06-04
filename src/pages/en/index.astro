@@ -59,7 +59,17 @@ import Layout from "../../layouts/Layout.astro";
     </div>
     <div id="about">
         <br />
-        <h1 id="about_title">About me</h1>
+        <div id="about_title">
+            <h1>Sobre Mi</h1>
+            <div id="AvailableWork">
+                <span id="AvailableWork_Text">
+                    <div id="AvailableWork_Text_Content">
+                        Available to work
+                    </div>
+                    <span id="AvailableWork_Text_Conic"></span>
+                </span>
+            </div>
+        </div>
         <p id="about_text">
             Systems Engineering student with knowledge in design, creation and
             optimization of pages and web applications, passionate about web
@@ -81,7 +91,6 @@ import Layout from "../../layouts/Layout.astro";
         </div>
     </div>
     <div id="experience">
-        <br />
         <h1 id="experience_title">Experience</h1>
         <ul id="experience_jobs">
             <li class="experience_job">
@@ -96,80 +105,7 @@ import Layout from "../../layouts/Layout.astro";
             </li>
         </ul>
     </div>
-    <div id="studies">
-        <br />
-        <h1 id="studies_title">Studies</h1>
-        <ul id="studies_jobs">
-            <li class="studies_job">
-                <h2 class="studies_job_title">Systems Engineer</h2>
-                <h3 class="studies_job_company">
-                    Minuto De Dios University Corporation | July 2023 – Present
-                </h3>
-            </li>
-        </ul>
-    </div>
-    <div id="jobs">
-        <br />
-        <h1 id="jobs_title">Commissions</h1>
-        <div id="jobs_elements">
-            <div class="jobs_element">
-                <div class="jobs_element_data">
-                    <div class="jobs_element_content">
-                        <div class="jobs_element_content_title">
-                            <h2>Review de Estudiantes Blue Archive</h2>
-                        </div>
-                        <div class="jobs_element_content_dates">
-                            <h3>
-                                Diseño <span class="complete">Abril 2024</span>
-                            </h3>
-                        </div>
-                        <div class="jobs_element_content_descripcion">
-                            <p>
-                                Requested by <a
-                                    class="urls"
-                                    href="https://www.youtube.com/@Tenma21"
-                                    target="_blank"
-                                    rel="noopener noreferrer">Final Tenma</a
-                                >, a redesign of its student reviews section was
-                                agreed to show all the data based on the Blue
-                                Archive video game
-                            </p>
-                        </div>
-                    </div>
-                    <div class="jobs_element_image">
-                        <img
-                            src="/DesingBlueArchiveReviews.webp"
-                            alt="Desing Blue Archive Reviews"
-                            width="266.656px"
-                            height="150px"
-                        />
-                    </div>
-                </div>
-                <hr class="jobs_element_separator" />
-                <div class="jobs_element_secundary">
-                    <div class="jobs_element_secondary_links">
-                        <a
-                            href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
-                            rel="external">Demo</a
-                        >
-                    </div>
-                    <div class="jobs_element_secondary_techs">
-                        <img
-                            class="jobs_element_secondary_techs_icons"
-                            src="/CorelVectorLogo.webp"
-                            width="30px"
-                            height="30px"
-                            alt="Corel Vector"
-                            id="corelvector"
-                        />
-                        <p id="jobs_element_secondary_techs_name"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="projects">
-        <br />
         <h1 id="projects_title">Proyectos</h1>
         <div id="projects_elements">
             <div class="projects_element">
@@ -177,20 +113,16 @@ import Layout from "../../layouts/Layout.astro";
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>PngtubeStudio</h2>
+                            <span class="SpanStatus continue">Developing</span>
                         </div>
                         <div class="projects_element_content_dates">
-                            <h3>
-                                November 2023 - <span class="continue"
-                                    >Developing</span
-                                >
-                            </h3>
+                            <h3>November 2023</h3>
                         </div>
                         <div class="projects_element_content_descripcion">
                             <p>
-                                This project seeks to be an alternative to
-                                Pngtubers, integrating tools more dedicated to
-                                said format, seeking to be a community-based
-                                program.
+                                An alternative for content creators who use
+                                virtual avatars, integrating tools more
+                                dedicated to the Pngtuber format
                             </p>
                         </div>
                     </div>
@@ -253,51 +185,163 @@ import Layout from "../../layouts/Layout.astro";
                     </div>
                 </div>
             </div>
+            <div class="projects_element">
+                <div class="projects_element_data">
+                    <div class="projects_element_content">
+                        <div class="projects_element_content_title">
+                            <h2>Spotify Clon</h2>
+                            <span class="SpanStatus continue">Developing</span>
+                        </div>
+                        <div class="projects_element_content_dates">
+                            <h3>June 2024</h3>
+                        </div>
+                        <div class="projects_element_content_descripcion">
+                            <p>
+                                A recreation of the <a
+                                    class="urls"
+                                    target="_blank"
+                                    href="https://open.spotify.com/">Spotify</a
+                                > streaming service as a web and desktop application
+                                including Music Download, Account Creation, Rest
+                                API, etc. being a functional version of this <a
+                                    class="urls"
+                                    target="_blank"
+                                    href="https://www.youtube.com/watch?v=suhEIUapSJQ"
+                                    >Interface</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="projects_element_image">
+                        <img
+                            src="/SpotifyLogo.webp"
+                            alt="PngtubeStudio"
+                            width="150px"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="projects_element_separator" />
+                <div class="projects_element_secundary">
+                    <div class="projects_element_secondary_links">
+                        <a
+                            target="_blank"
+                            href="https://github.com/PintoGamer64/SpotifyClon"
+                            rel="external">GitHub</a
+                        >
+                        <a class="url_disable" href="#" rel="external">Web</a>
+                        <a class="url_disable" href="#" rel="external"
+                            >Download</a
+                        >
+                    </div>
+                    <div class="projects_element_secondary_techs">
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="/NodeLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="NodeJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="/ViteLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Vite"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="/ReactLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ReactJs"
+                            id="corelvector"
+                        />
+                        <img
+                            class="projects_element_secondary_techs_icons"
+                            src="/ElectronLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="ElectronJs"
+                            id="corelvector"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script is:inline>
-        const jobs_element_secondary_techs_icons =
-            document.getElementsByClassName(
-                "jobs_element_secondary_techs_icons",
-            );
-        const projects_element_secondary_techs_icons =
-            document.getElementsByClassName(
-                "projects_element_secondary_techs_icons",
-            );
-        const jobs_element_secondary_techs_name = document.getElementById(
-            "jobs_element_secondary_techs_name",
-        );
-        const projects_element_secondary_techs_name = document.getElementById(
-            "projects_element_secondary_techs_name",
-        );
-        for (let i = 0; i < jobs_element_secondary_techs_icons.length; i++) {
-            const element = jobs_element_secondary_techs_icons[i];
-            element.addEventListener("mouseenter", (event) => {
-                jobs_element_secondary_techs_name.style.display = "grid";
-                jobs_element_secondary_techs_name.innerText = event.target.alt;
-            });
-            element.addEventListener("mouseleave", () => {
-                jobs_element_secondary_techs_name.style.display = "none";
-                jobs_element_secondary_techs_name.innerText = "";
-            });
-        }
-        for (
-            let i = 0;
-            i < projects_element_secondary_techs_icons.length;
-            i++
-        ) {
-            const element = projects_element_secondary_techs_icons[i];
-            element.addEventListener("mouseenter", (event) => {
-                projects_element_secondary_techs_name.style.display = "grid";
-                projects_element_secondary_techs_name.innerText =
-                    event.target.alt;
-            });
-            element.addEventListener("mouseleave", () => {
-                projects_element_secondary_techs_name.style.display = "none";
-                projects_element_secondary_techs_name.innerText = "";
-            });
-        }
-    </script>
+    <div id="jobs">
+        <h1 id="jobs_title">Commissions</h1>
+        <div id="jobs_elements">
+            <div class="jobs_element">
+                <div class="jobs_element_data">
+                    <div class="jobs_element_content">
+                        <div class="jobs_element_content_title">
+                            <h2>Review de Estudiantes Blue Archive</h2>
+                        </div>
+                        <div class="jobs_element_content_dates">
+                            <h3>
+                                Diseño <!-- <span class="SpanStatus complete">Abril 2024</span> -->
+                            </h3>
+                        </div>
+                        <div class="jobs_element_content_descripcion">
+                            <p>
+                                Requested by <a
+                                    class="urls"
+                                    href="https://www.youtube.com/@Tenma21"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Final Tenma</a
+                                >, a redesign of its student reviews section was
+                                agreed to show all the data based on the Blue
+                                Archive video game
+                            </p>
+                        </div>
+                    </div>
+                    <div class="jobs_element_image">
+                        <img
+                            src="/DesingBlueArchiveReviews.webp"
+                            alt="Desing Blue Archive Reviews"
+                            width="266.656px"
+                            height="150px"
+                        />
+                    </div>
+                </div>
+                <hr class="jobs_element_separator" />
+                <div class="jobs_element_secundary">
+                    <div class="jobs_element_secondary_links">
+                        <a
+                            href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
+                            rel="external">Demo</a
+                        >
+                    </div>
+                    <div class="jobs_element_secondary_techs">
+                        <img
+                            class="jobs_element_secondary_techs_icons"
+                            src="/CorelVectorLogo.webp"
+                            width="30px"
+                            height="30px"
+                            alt="Corel Vector"
+                            id="corelvector"
+                        />
+                        <p id="jobs_element_secondary_techs_name"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="studies">
+        <h1 id="studies_title">Studies</h1>
+        <ul id="studies_jobs">
+            <li class="studies_job">
+                <h2 class="studies_job_title">Systems Engineer</h2>
+                <h3 class="studies_job_company">
+                    Minuto De Dios University Corporation | July 2023 – Present
+                </h3>
+            </li>
+        </ul>
+    </div>
     <style>
         #presentation {
             overflow: hidden;
@@ -317,6 +361,14 @@ import Layout from "../../layouts/Layout.astro";
             width: 90%;
             padding: 25px 10px 0;
             align-items: center;
+        }
+
+        #about_title {
+            display: flex;
+        }
+
+        #about_title h1 {
+            margin: 10px 0;
         }
 
         #MiniProfileMain {
@@ -570,21 +622,22 @@ import Layout from "../../layouts/Layout.astro";
             font-style: italic;
             margin: 10px 0 0 0;
         }
-        .jobs_element_content_dates span,
-        .projects_element_content_dates span {
-            padding: 2.5px 10px;
+        .SpanStatus,
+        .SpanStatus {
+            margin: 0 0 0 10px;
+            padding: 2.5px 5px;
             border-radius: 5px;
         }
-        .jobs_element_content_dates span.complete,
-        .projects_element_content_dates span.complete {
+        .SpanStatus.complete,
+        .SpanStatus.complete {
             background-color: #850083;
         }
-        .jobs_element_content_dates span.continue,
-        .projects_element_content_dates span.continue {
+        .SpanStatus.continue,
+        .SpanStatus.continue {
             background-color: #0016ff;
         }
-        .jobs_element_content_dates span.pause,
-        .projects_element_content_dates span.pause {
+        .SpanStatus.pause,
+        .SpanStatus.pause {
             background-color: #b30000;
         }
         .jobs_element_content_descripcion,

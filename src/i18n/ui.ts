@@ -10,10 +10,14 @@ export const ui = {
         'nav.about': 'About',
         'nav.experience': 'Experience',
         'nav.projects': 'Projects',
+        'footer.ref': 'Reference:',
+        'footer.mes': 'Made with love'
     },
     es: {
         'nav.about': 'Sobre Mi',
         'nav.experience': 'Experiencia',
         'nav.projects': 'Proyectos',
+        'footer.ref': 'Referencia:',
+        'footer.mes': 'Hecho con cariño'
     },
 };

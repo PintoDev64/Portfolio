@@ -2,6 +2,11 @@
 import Navbar from "../components/Navbar.astro";
 import MiniProfile from "../components/MiniProfile.astro";
 
+import { getLangFromUrl, useTranslations } from "../utils/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translate = useTranslations(lang);
+
 interface Props {
     title: string;
 }
@@ -63,12 +68,12 @@ const { title } = Astro.props;
                     <slot />
                     <div id="ContentScrollFooter">
                         <p>
-                            Referencia: <a
+                            {translate('footer.ref')} <a
                                 class="urls"
                                 href="https://porfolio.dev/"
                                 target="_blank"
                                 rel="noopener noreferrer">portfolio.dev</a
-                            >, Hecho con cariño ❤
+                            > - {translate('footer.mes')} ❤
                         </p>
                     </div>
                 </div>
@@ -78,9 +83,9 @@ const { title } = Astro.props;
 </html>
 <style is:global>
     @font-face {
-        font-family: "CascadiaMono";
-        src: url("/CascadiaMono.woff2") format("woff2");
-        font-weight: normal;
+        font-family: "Onest Variable";
+        src: url("/Onest-VariableFont_wght.ttf");
+        font-weight: 400;
         font-style: normal;
         font-display: swap;
     }
@@ -101,14 +106,12 @@ const { title } = Astro.props;
     }
 
     * {
-        font-family: CascadiaMono;
-        word-spacing: -2px;
+        font-family: "Onest Variable";
         color: var(--colorText);
     }
 
     a.urls {
-        color: #ff0000;
-        font-style: italic;
+        color: #ff7b00;
     }
 
     body {
@@ -232,6 +235,12 @@ const { title } = Astro.props;
 
     #ContentScrollFooter p {
         margin: 0;
+    }
+
+    a.url_disable {
+        pointer-events: none;
+        background: #ffffff50 !important;
+        cursor: not-allowed;
     }
 
     @media screen and (max-width: 1200px) {
