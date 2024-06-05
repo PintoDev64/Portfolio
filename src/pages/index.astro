@@ -58,7 +58,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
     <div id="about">
-        <br>
+        <br />
         <div id="about_title">
             <h1>Sobre Mi</h1>
             <div id="AvailableWork">
@@ -76,11 +76,17 @@ import Layout from "../layouts/Layout.astro";
             por el desarrollo web y buscando ampliar mis conocimientos :D
         </p>
         <div id="about_links">
-            <a href="/Joan%20Cardozo%20CV.pdf" rel="archives" id="about_cv">
+            <a
+                class="UrlsButtons"
+                href="/Joan%20Cardozo%20CV.pdf"
+                rel="archives"
+                id="about_cv"
+            >
                 <p>Curriculum</p>
                 <PDFRedirect />
             </a>
             <a
+                class="UrlsButtons"
                 href="/ComisionesPintoGamer64.pdf"
                 rel="archives"
                 id="about_comissions"
@@ -141,11 +147,13 @@ import Layout from "../layouts/Layout.astro";
                 <div class="projects_element_secundary">
                     <div class="projects_element_secondary_links">
                         <a
+                            class="UrlsButtons"
                             target="_blank"
                             href="https://github.com/PintoGamer64/PngtubeStudioProject"
                             rel="external">GitHub</a
                         >
                         <a
+                            class="UrlsButtons"
                             href="https://pintogamer64.itch.io/pngtubestudio"
                             rel="external"
                             target="_blank">Descargar</a
@@ -229,6 +237,7 @@ import Layout from "../layouts/Layout.astro";
                 <div class="projects_element_secundary">
                     <div class="projects_element_secondary_links">
                         <a
+                            class="UrlsButtons"
                             target="_blank"
                             href="https://github.com/PintoGamer64/SpotifyClon"
                             rel="external">GitHub</a
@@ -316,8 +325,10 @@ import Layout from "../layouts/Layout.astro";
                 <div class="jobs_element_secundary">
                     <div class="jobs_element_secondary_links">
                         <a
+                            class="UrlsButtons"
                             href="https://youtu.be/w5U0PXK5GEw?si=XuBdQQPZyX3x9f68"
-                            rel="external">Demostracion</a
+                            rel="external"
+                            target="_blank">Demostracion</a
                         >
                     </div>
                     <div class="jobs_element_secondary_techs">
@@ -348,6 +359,10 @@ import Layout from "../layouts/Layout.astro";
         </ul>
     </div>
     <style>
+        .UrlsButtons:hover {
+            transform: scale(1.1)
+        }
+
         #presentation {
             overflow: hidden;
             overflow-y: hidden;
