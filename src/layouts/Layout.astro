@@ -68,12 +68,13 @@ const { title } = Astro.props;
                     <slot />
                     <div id="ContentScrollFooter">
                         <p>
-                            {translate('footer.ref')} <a
+                            {translate("footer.ref")}
+                            <a
                                 class="urls"
                                 href="https://porfolio.dev/"
                                 target="_blank"
                                 rel="noopener noreferrer">portfolio.dev</a
-                            > - {translate('footer.mes')} ❤
+                            > - {translate("footer.mes")} ❤
                         </p>
                     </div>
                 </div>
@@ -112,6 +113,10 @@ const { title } = Astro.props;
 
     a.urls {
         color: #ff7b00;
+    }
+
+    .UrlsButtons:hover {
+        transform: scale(1.05);
     }
 
     body {
@@ -276,6 +281,10 @@ const { title } = Astro.props;
             border: none;
             border-top: #ffffff var(--border-style) var(--border-width);
         }
+
+        .UrlsButtons:hover {
+            transform: scale(1);
+        }
     }
 
     @media screen and (max-width: 800px) {
@@ -291,6 +300,10 @@ const { title } = Astro.props;
             box-sizing: border-box;
             border-bottom: var(--border-width) var(--border-style)
                 var(--spice-border-active);
+        }
+
+        .UrlsButtons:hover {
+            transform: scale(1);
         }
     }
 </style>
