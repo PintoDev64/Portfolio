@@ -1,5 +1,4 @@
 ---
-import Facebook from "../components/icons/Facebook.astro";
 import Github from "../components/icons/Github.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import Mail from "../components/icons/Mail.astro";
@@ -201,8 +200,8 @@ import Layout from "../layouts/Layout.astro";
                     <div class="projects_element_content">
                         <div class="projects_element_content_title">
                             <h2>Spotify Clon</h2>
-                            <span class="SpanStatus continue"
-                                >Desarrollando</span
+                            <span class="SpanStatus complete"
+                                >Completado</span
                             >
                         </div>
                         <div class="projects_element_content_dates">
@@ -248,9 +247,6 @@ import Layout from "../layouts/Layout.astro";
                             href="https://spotify-clon-interface.vercel.app/"
                             rel="external"
                             target="_blank">Web</a
-                        >
-                        <a class="url_disable" href="#" rel="external"
-                            >Descargar</a
                         >
                     </div>
                     <div class="projects_element_secondary_techs">
@@ -644,21 +640,18 @@ import Layout from "../layouts/Layout.astro";
             font-style: italic;
             margin: 10px 0 0 0;
         }
-        .SpanStatus,
         .SpanStatus {
             margin: 0 0 0 10px;
             padding: 2.5px 5px;
             border-radius: 5px;
+            font-size: 16px;
         }
-        .SpanStatus.complete,
         .SpanStatus.complete {
-            background-color: #850083;
+            background-color: #aa0101;
         }
-        .SpanStatus.continue,
         .SpanStatus.continue {
             background-color: #0016ff;
         }
-        .SpanStatus.pause,
         .SpanStatus.pause {
             background-color: #b30000;
         }
