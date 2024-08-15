@@ -82,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
                 rel="archives"
                 id="about_cv"
             >
-                <p>Curriculum</p>
+                <p class="UrlsButtonsText">Curriculum</p>
                 <PDFRedirect />
             </a>
             <a
@@ -91,7 +91,7 @@ import Layout from "../layouts/Layout.astro";
                 rel="archives"
                 id="about_comissions"
             >
-                <p>Comisiones</p>
+                <p class="UrlsButtonsText">Comisiones</p>
                 <PDFRedirect />
             </a>
         </div>
@@ -252,14 +252,6 @@ import Layout from "../layouts/Layout.astro";
                     <div class="projects_element_secondary_techs">
                         <img
                             class="projects_element_secondary_techs_icons"
-                            src="/NodeLogo.webp"
-                            width="30px"
-                            height="30px"
-                            alt="NodeJs"
-                            id="corelvector"
-                        />
-                        <img
-                            class="projects_element_secondary_techs_icons"
                             src="/ViteLogo.webp"
                             width="30px"
                             height="30px"
@@ -272,14 +264,6 @@ import Layout from "../layouts/Layout.astro";
                             width="30px"
                             height="30px"
                             alt="ReactJs"
-                            id="corelvector"
-                        />
-                        <img
-                            class="projects_element_secondary_techs_icons"
-                            src="/ElectronLogo.webp"
-                            width="30px"
-                            height="30px"
-                            alt="ElectronJs"
                             id="corelvector"
                         />
                     </div>
@@ -295,10 +279,13 @@ import Layout from "../layouts/Layout.astro";
                     <div class="jobs_element_content">
                         <div class="jobs_element_content_title">
                             <h2>Review de Estudiantes Blue Archive</h2>
+                            <span class="SpanStatus complete"
+                                >Completado</span
+                            >
                         </div>
                         <div class="jobs_element_content_dates">
                             <h3>
-                                Diseño <!-- <span class="SpanStatus complete">Abril 2024</span> -->
+                                Diseño
                             </h3>
                         </div>
                         <div class="jobs_element_content_descripcion">
@@ -481,7 +468,7 @@ import Layout from "../layouts/Layout.astro";
             justify-content: center;
             font-size: large;
         }
-        #about_cv p {
+        .UrlsButtonsText {
             margin: 0 10px 0 0;
         }
         #studies_jobs,

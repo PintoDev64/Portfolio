@@ -81,7 +81,7 @@ import Layout from "../../layouts/Layout.astro";
                 rel="archives"
                 id="about_cv"
             >
-                <p>Curriculum</p>
+                <p class="UrlsButtonsText">Curriculum</p>
                 <PDFRedirect />
             </a>
             <a
@@ -90,7 +90,7 @@ import Layout from "../../layouts/Layout.astro";
                 rel="archives"
                 id="about_comissions"
             >
-                <p>Commissions</p>
+                <p class="UrlsButtonsText">Commissions</p>
                 <PDFRedirect />
             </a>
         </div>
@@ -290,10 +290,11 @@ import Layout from "../../layouts/Layout.astro";
                     <div class="jobs_element_content">
                         <div class="jobs_element_content_title">
                             <h2>Review de Estudiantes Blue Archive</h2>
+                            <span class="SpanStatus complete">Finished</span>
                         </div>
                         <div class="jobs_element_content_dates">
                             <h3>
-                                Diseño <!-- <span class="SpanStatus complete">Abril 2024</span> -->
+                                Diseño
                             </h3>
                         </div>
                         <div class="jobs_element_content_descripcion">
@@ -475,7 +476,7 @@ import Layout from "../../layouts/Layout.astro";
             justify-content: center;
             font-size: large;
         }
-        #about_cv p {
+        .UrlsButtonsText {
             margin: 0 10px 0 0;
         }
         #studies_jobs,
@@ -640,15 +641,12 @@ import Layout from "../../layouts/Layout.astro";
             padding: 2.5px 5px;
             border-radius: 5px;
         }
-        .SpanStatus.complete,
         .SpanStatus.complete {
-            background-color: #850083;
+            background-color: #aa0101;
         }
-        .SpanStatus.continue,
-        .SpanStatus.continue {
+        .SpanStatus.continue{
             background-color: #0016ff;
         }
-        .SpanStatus.pause,
         .SpanStatus.pause {
             background-color: #b30000;
         }
